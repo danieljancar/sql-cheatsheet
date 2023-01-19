@@ -29,7 +29,7 @@ SQL is the standard language and interface for:
 - Manipulating (DML)
 - Querying (DQL) relational databases.
 
-![language areas](images/language_areas.png){: align="center"}  
+![language areas](images/language_areas.png)
 
 ([Back to top](#sql-cheatsheet))
 ## Data Definition Language (DDL)
