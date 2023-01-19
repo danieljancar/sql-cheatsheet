@@ -35,34 +35,35 @@ SQL is the standard language and interface for:
 ## Data Definition Language (DDL)
 > Description
 ### CREATE
-> Description
-``` 
--- This command is used to create a new table with specified columns and data types
-        CREATE TABLE table_name (
-        column1 data_type constraint,
-        column2 data_type constraint,
-        );
+> This command is used to create a new table with specified columns and data types
+```        
+    CREATE TABLE table_name (
+    column1 data_type constraint,
+    column2 data_type constraint,
+    );
 ```
 ### ALTER
-> Description
+> This command is used to add a new column to an existing table
 ```
--- This command is used to add a new column to an existing table
-        ALTER TABLE table_name
-        ADD column_name data_type constraint;
-
--- This command is used to modify an existing column in a table
-        ALTER TABLE table_name
-        MODIFY column_name data_type constraint;
-
--- This command is used to delete a column from an existing table
-        ALTER TABLE table_name
-        DROP COLUMN column_name;
+    ALTER TABLE table_name
+    ADD column_name data_type constraint;
 ```
+> This command is used to modify an existing column in a table
+```
+    ALTER TABLE table_name
+    MODIFY column_name data_type constraint;
+```
+
+> This command is used to delete a column from an existing table
+```
+    ALTER TABLE table_name
+    DROP COLUMN column_name;
+```
+
 ### DROP
-> Description
+> This command is used to delete an existing table and all its data
 ```
--- This command is used to delete an existing table and all its data
-        DROP TABLE table_name;
+    DROP TABLE table_name;
 ```
 ### TRUNCATE
 > Description
