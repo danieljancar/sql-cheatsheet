@@ -9,8 +9,8 @@ To contribute to the cheatsheet, you need to be whitelisted for the wiki.
 
 Thank you for your contributions to this community-driven project!
 
-### **- Find the ***WIKI*** of the cheatsheet [here](https://github.com/Sigmale1000/SQL-Cheatsheet/wiki).**
-### **- Find the ***TO-DO list*** of the cheatsheet [here](to-do.md).**
+### **- Find the cheatsheet [here](https://github.com/Sigmale1000/SQL-Cheatsheet/wiki).**
+#### **- Find the ***TO-DO list*** of the cheatsheet [here](to-do.md).**
 <br>
 
 ---
