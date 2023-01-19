@@ -13,7 +13,7 @@ Thank you for your contributions to this community-driven project!
 # Table of Content
 
 
-## About SQL
+## About SQL (Structured Query Language)
 ### Main Features
 - SQL is a declarative, set- and table-oriented language
 - SQL lacks features of a programming language
@@ -33,8 +33,9 @@ SQL is the standard language and interface for:
 
 ([Back to top](#sql-cheatsheet))
 ## Data Definition Language (DDL)
-> Description
+> DDL is a subset of SQL (Structured Query Language) that is used to define the structure of a relational database. DDL statements are used to create, modify, and delete database objects such as tables, views, indexes, and constraints.
 ### CREATE
+The CREATE command is used to create a new table with specified columns and data types. The table name, column names, and data types must be defined within the command.
 > This command is used to create a new table with specified columns and data types
 ```sql       
     CREATE TABLE table_name (
@@ -43,6 +44,7 @@ SQL is the standard language and interface for:
     );
 ```
 ### ALTER
+The ALTER command is used to make changes to an existing table, such as adding a new column, modifying an existing column, or deleting a column.
 > This command is used to add a new column to an existing table
 ```sql
     ALTER TABLE table_name
@@ -59,30 +61,37 @@ SQL is the standard language and interface for:
     ALTER TABLE table_name
     DROP COLUMN column_name;
 ```
-
 ### DROP
+The DROP command is used to delete an existing table, its structure, and all its data permanently from the database. It can also be used to delete other database objects such as views, indexes, and sequences. Once a table is dropped, all the data stored in it will be lost and cannot be recovered. It is important to use this command with caution as it cannot be undone.
 > This command is used to delete an existing table and all its data
 ```sql
     DROP TABLE table_name;
 ```
 ### TRUNCATE
+The TRUNCATE command is used to delete all data from an existing table, but it keeps the table structure and its associated objects such as indexes, triggers, and constraints. Unlike the DROP command, TRUNCATE does not generate any undo logs, making it faster and more efficient for large tables with many rows. However, it also does not fire any DELETE triggers, and the data deleted cannot be recovered. It is important to use this command with caution as it cannot be undone.
 > This command is used to delete all data from an existing table, but keeps the table structure
 ```sql
     TRUNCATE TABLE table_name;
 ```
 ### SQL KEYS
+In SQL, keys are used to establish and enforce relationships between tables in a database. There are two main types of keys: primary keys and foreign keys.
+**Primary Key**
+A primary key is a unique identifier for each row in a table. It is used to enforce the integrity of the data and to ensure that there are no duplicate values in the table. Only one primary key can be defined for a table, and it cannot contain null values. The primary key is defined using the PRIMARY KEY constraint.
 > This command is used to specify a column or set of columns as the primary key for a table
 ```sql
     PRIMARY KEY (column1, column2, ...)
 ```
+**Foreign Key**
+A foreign key is a column or set of columns in a table that is used to establish a link between the data in two tables. The foreign key references a primary key in another table, creating a link between the two tables. This link is used to enforce referential integrity, which ensures that data in the related tables is consistent and that there are no orphaned records. The foreign key is defined using the FOREIGN KEY constraint.
 > This command is used to specify a foreign key constraint on a column in a table
 ```sql
     FOREIGN KEY (column) REFERENCES referenced_table(referenced_column)
 ```
+In summary, primary keys are used to uniquely identify each record in a table and foreign keys are used to create links between tables, ensuring data integrity and consistency.
 
 ([Back to top](#sql-cheatsheet))
 ## Data Manipulation Language (DML)
-> Description
+> DML is a computer programming language used to retrieve, manipulate, and update data in a relational database. Examples of DML statements include SELECT, INSERT, UPDATE, and DELETE. These statements allow users to query the database for specific information, add new data to the database, change existing data, and delete unwanted data. DML is typically used in conjunction with Data Definition Language (DDL) statements, which are used to create and modify the structure of a database, such as creating tables and establishing relationships between them.
 ### INSERT
 > This command is used to insert new data into a table
 ```sql
@@ -122,7 +131,7 @@ SQL is the standard language and interface for:
 
 ([Back to top](#sql-cheatsheet))
 ## Data Query Language (DQL)
-> Description
+> Data Query Language (DQL) is used to retrieve data from a relational database. DQL statements are used to select and retrieve data from one or more tables within a database. Examples of DQL statements include SELECT, GET and READ. These statements allow users to query the database for specific information and retrieve the data in a structured format. DQL statements are typically used by end-users to access and retrieve data from the database and are not used to make changes to the database structure or data. DQL statements are executed by the database management system (DBMS) and the results are returned to the user in the form of a table or other structured format.
 ### SELECT
 The SELECT statement is used to query data from one or more tables in a database.
 > This command is used to select all columns from a table
@@ -204,7 +213,7 @@ SET operations are used to combine the result of two or more SELECT statements i
 
 ([Back to top](#sql-cheatsheet))
 ## Views
-> Description
+> A view in a relational database is a virtual table that is based on the result of a SELECT statement. It does not store data itself, but rather it provides a way to access data from one or more tables in a specific way. Views can be used to simplify complex queries, to restrict access to certain columns of a table, or to present data in a specific format.
 ### CREATE
 > This command is used to create a virtual table based on the result of a SELECT statement
 ```sql
@@ -235,7 +244,7 @@ SET operations are used to combine the result of two or more SELECT statements i
 
 ([Back to top](#sql-cheatsheet))
 ## Data Security
-> Description
+> Data security refers to the protection of digital information and systems from unauthorized access, use, disclosure, disruption, modification, or destruction. It encompasses a wide range of measures and technologies that are used to safeguard sensitive and confidential information.
 ### AUTHENTICATION
 > This command is used to create a new user with a specified password
 ```sql
@@ -272,6 +281,6 @@ SET operations are used to combine the result of two or more SELECT statements i
     ADD ENCRYPTION (TYPE = Deterministic, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256');
 ```
 ## Data Backup
-> Description
+> Data backup is the process of creating a copy of important data and storing it in a separate location for safekeeping. The purpose of data backup is to ensure that the data can be restored in case of a data loss event, such as a hardware failure, software corruption, cyber attack or natural disaster.
 
 ([Back to top](#sql-cheatsheet))
