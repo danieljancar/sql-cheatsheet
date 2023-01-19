@@ -11,7 +11,8 @@ To contribute to the cheatsheet, please follow these guidelines:
 
 Thank you for your contributions to this community-driven project!
 
-> **USE ***CTRL+F*** to search for something in the cheatsheet!**
+#### **- Use ***CTRL+F*** to search for something in the cheatsheet!**
+#### **- Find the ***TO-DO list*** of the cheatsheet [here](to-do.md).**
 
 # Table of Content
 - [Data Definition Language](#data-definition-language)
