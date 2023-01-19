@@ -6,6 +6,6 @@
 - [ ] Create **Other** chapter 
 - [ ] Add **Transaction** subchapter
 
-- [ ] Transfer Readme into WIKI page
+- [ ] Transfer Readme into WIKI
 
 #### **Go back to the SQL cheatsheet [here](README.md).**
