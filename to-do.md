@@ -4,7 +4,8 @@
 - [ ] Explain SQL deeper
 - [ ] Write **Data Backup** chapter
 - [ ] Create **Other** chapter 
-- [ ] Add **Transaction** subchapter
+- [x] Add **Transaction** subchapter
+- [ ] Add DISTINCT command
 
 - [ ] Transfer Readme into WIKI
 
