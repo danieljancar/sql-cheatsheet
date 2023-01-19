@@ -251,11 +251,6 @@ The instructions are carried out according to the ACID principle:
 - Isolation (Isolation): Changes are only stored and visible to other users when the transaction is complete. During the transaction, the affected data is locked for others.
 - Durability (Durability): The changes remain permanently stored in the database after the transaction.
 
-Transactions should be as short as possible due to the locks and therefore contain as little SQL code as possible. There is the possibility of rolling back (Rollback) if an error occurs or the transaction is interrupted. This is an implicit rollback to the state before the transaction.
-
-A logbook is maintained for the undo operation, also called a transaction log. It is logically structured, consisting of instructions and not states.
-
-
 ### Transaction example
 > This transaction will virtualy execute the commands and only execute them to the "real" database as soon as the TRY gets executed without errors. If the TRY fails it will go to the CATCH and ROLLBACK the transaction.
 ```sql¨
