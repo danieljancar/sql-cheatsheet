@@ -31,7 +31,7 @@ Thank you for your contributions to this community-driven project!
 <br>
 
 # About SQL 
-Structured Query Language
+Structured Query Language (SQL) refers to a standard programming language utilized to extract, organize, manage, and manipulate data stored in relational databases. SQL is thereby referred to as a database language that can execute activities on databases that consist of tables made up of rows and columns.
 ### Main Features
 - SQL is a declarative, set- and table-oriented language
 - SQL lacks features of a programming language
