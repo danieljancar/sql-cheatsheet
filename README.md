@@ -327,3 +327,5 @@ Encryption is the process of converting plain text into an unreadable format to 
 <a href="https://github.com/Sigmale1000/SQL-Cheatsheet/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Sigmale1000/SQL-Cheatsheet" />
 </a>
+
+([Back to top](#sql-cheatsheet))
