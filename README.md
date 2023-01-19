@@ -212,7 +212,8 @@ The subquery is a query nested within another query. It is used to retrieve data
     SELECT * FROM table1
     WHERE column1 = (SELECT column2 FROM table2)
 ```
-### SET OPERATIONS
+
+### UNION
 SET operations are used to combine the result of two or more SELECT statements into a single result.
 > This command is used to select all distinct values from two or more tables that are combined using UNION
 ```sql
