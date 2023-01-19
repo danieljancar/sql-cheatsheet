@@ -28,7 +28,8 @@ SQL is the standard language and interface for:
 - Managing access (DCL)
 - Manipulating (DML)
 - Querying (DQL) relational databases.
-<img src="images/language_areas.png" alt="language areas"/>
+
+![language areas](images/language_areas.png){: align="center"}  
 
 ([Back to top](#sql-cheatsheet))
 ## Data Definition Language (DDL)
