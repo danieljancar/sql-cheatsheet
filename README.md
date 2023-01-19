@@ -164,6 +164,12 @@ The SELECT statement is used to query data from one or more tables in a database
 ```sql
     SELECT column1, column2, ... FROM table_name;
 ```
+### CONCAT 
+The CONCAT statement is used to combine multiple data tables in a database
+> This command is used to combine all columns from a table into one data
+```sql
+    SELECT column_id, CONCAT(column_name, column_surname) AS newtable_name FROM table_name;
+```
 ### WHERE
 The WHERE clause is used to filter data based on a specific condition.
 > This command is used to select all columns from a table where a specific column is equal to a certain value.
