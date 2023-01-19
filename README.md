@@ -16,8 +16,7 @@ Thank you for your contributions to this community-driven project!
 <br>
 
 # Table of Content
-- [SQL Cheatsheet](#sql-cheatsheet)
----
+* [SQL Cheatsheet](#sql-cheatsheet)
 - [About SQL](#about-sql)
 - [Data Definition Language](#data-definition-language)
 - [Data Manipulation Language](#data-manipulation-language)
@@ -26,8 +25,7 @@ Thank you for your contributions to this community-driven project!
 - [Data Security](#data-security)
 - [Data Backup](#data-backup)
 - [Other](#other)
----
-- [Project](#other)
+* [Project](#other)
 <br>
 
 # About SQL 
