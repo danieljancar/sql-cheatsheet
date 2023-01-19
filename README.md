@@ -1,3 +1,4 @@
+![sql banner](images/sql_banner1.jpeg)
 # SQL-Cheatsheet
 Welcome to the SQL Cheatsheet repository! <br>
 This cheatsheet is a comprehensive collection of commonly-used SQL queries and commands, organized by topic (e.g. DDL, DML, etc.). Our goal is to make it easy for developers, data analysts, and database administrators to quickly find and use the SQL commands they need.
