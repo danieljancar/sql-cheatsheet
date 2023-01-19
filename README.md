@@ -233,6 +233,14 @@ SET operations are used to combine the result of two or more SELECT statements i
 ```
 
 ([Back to top](#sql-cheatsheet))
+# Transaction
+> In SQL, a transaction is a sequence of one or more database operations that are executed as a single logical unit of work. These operations can include inserting, updating, or deleting data, and can span multiple tables and/or rows. Transactions are used to ensure that the database remains in a consistent state, even in the event of errors or system failures. They also provide a way to undo or rollback changes, if necessary. Transactions are typically managed using the BEGIN, COMMIT, and ROLLBACK statements.
+
+## Features of transactions
+
+
+### Transaction example
+
 # Views
 > A view in a relational database is a virtual table that is based on the result of a SELECT statement. It does not store data itself, but rather it provides a way to access data from one or more tables in a specific way. Views can be used to simplify complex queries, to restrict access to certain columns of a table, or to present data in a specific format.
 ### CREATE
@@ -316,8 +324,8 @@ Encryption is the process of converting plain text into an unreadable format to 
 ([Back to top](#sql-cheatsheet))
 
 # Other 
-> Description
-> 
+> Here you'll find information, commands and tips about other things related to SQL
+
 ([Back to top](#sql-cheatsheet))
 
 ---
