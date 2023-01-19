@@ -247,7 +247,7 @@ The CREATE VIEW statement is used to create a new virtual table based on the res
     WHERE condition;
 ```
 ### QUERY
-The SELECT statement is used to query data from a view. It allows the user to specify the columns to retrieve and any conditions to filter the data.
+The SELECT VIEW statement is used to query data from a view. It allows the user to specify the columns to retrieve and any conditions to filter the data.
 > This command is used to query data from a view
 ```sql
     SELECT column1, column2, ...
@@ -262,7 +262,7 @@ The CREATE OR REPLACE VIEW statement is used to modify the SELECT statement of a
     FROM table_name
     WHERE condition;
 ```
-### DELETE
+### DROP
 The DROP VIEW statement is used to delete a view. It allows the user to remove a virtual table from the database.
 > This command is used to delete a view
 ```sql
