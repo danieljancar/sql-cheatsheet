@@ -367,4 +367,3 @@ Encryption is the process of converting plain text into an unreadable format to 
 </a>
 
 ([Back to top](#sql-cheatsheet))
-
