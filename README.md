@@ -124,39 +124,82 @@ SQL is the standard language and interface for:
 ## Data Query Language (DQL)
 > Description
 ### SELECT
-> Description
+The SELECT statement is used to query data from one or more tables in a database.
+> This command is used to select all columns from a table
+```sql
+    SELECT * FROM table_name;
 ```
-
+> This command is used to select specific columns from a table
+```sql
+    SELECT column1, column2, ... FROM table_name;
 ```
 ### WHERE
-> Description
-```
-
+The WHERE clause is used to filter data based on a specific condition.
+> This command is used to select all columns from a table where a specific column is equal to a certain value.
+```sql
+    SELECT * FROM table_name
+    WHERE column_name = value;
 ```
 ### CASE
-> Description
-```
-
+The CASE statement is used to evaluate a set of conditions and return a specific value based on the result.
+> This command is used to select a column and assign a new column based on the value of another column
+```sql
+    SELECT column1,
+    CASE column2
+    WHEN value1 THEN 'new_value1'
+    WHEN value2 THEN 'new_value2'
+    ELSE 'new_value3'
+    END AS new_column
+    FROM table_name;
 ```
 ### JOIN
-> Description
-```
-
+The JOIN clause is used to combine rows from two or more tables based on a related column between them.
+> This command is used to select all columns from two tables where the values in a specific column match
+```sql
+    SELECT * FROM table1
+    JOIN table2
+    ON table1.column_name = table2.column_name;
 ```
 ### GROUP
-> Description
+The GROUP BY clause is used to group rows from a table based on one or more columns.
+> This command is used to select a column and the count of its distinct values, grouped by another column
+```sql
+    SELECT column1, COUNT(DISTINCT column2)
+    FROM table_name
+    GROUP BY column1;
 ```
-
-```
-### SUBQUERIES
-> Description
-```
-
+### SUBQUERIES$
+The subquery is a query nested within another query. It is used to retrieve data from one table based on the results of another table.
+> This command is used to select all columns from a table where a specific column matches a value returned by a subquery
+```sql
+    SELECT * FROM table1
+    WHERE column1 = (SELECT column2 FROM table2)
 ```
 ### SET OPERATIONS
-> Description
+SET operations are used to combine the result of two or more SELECT statements into a single result.
+> This command is used to select all distinct values from two or more tables that are combined using UNION
+```sql
+    SELECT column1 FROM table1
+    UNION
+    SELECT column1 FROM table2;
 ```
-
+> This command is used to select all values from two or more tables that are combined using UNION ALL
+```sql
+    SELECT column1 FROM table1
+    UNION ALL
+    SELECT column1 FROM table2;
+```
+> This command is used to select all values that are unique to the first table and are not in the second table
+```sql
+    SELECT column1 FROM table1
+    EXCEPT
+    SELECT column1 FROM table2;
+```
+> This command is used to select all values that are in both the first and second table
+```sql
+    SELECT column1 FROM table1
+    INTERSECT
+    SELECT column1 FROM table2;
 ```
 
 ([Back to top](#sql-cheatsheet))
