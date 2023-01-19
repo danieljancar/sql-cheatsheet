@@ -11,7 +11,12 @@ To contribute to the cheatsheet, please follow these guidelines:
 Thank you for your contributions to this community-driven project!
 
 # Table of Content
-
+- [Data Definition Language](#data-definition-language)
+- [Data Manipulation Language](#data-manipulation-language)
+- [Data Query Language](#data-query-language)
+- [Views](#views)
+- [Data Security](#data-security)
+- [Data Backup](#data-backup)
 
 ## About SQL (Structured Query Language)
 ### Main Features
@@ -32,7 +37,7 @@ SQL is the standard language and interface for:
 ![language areas](images/language_areas.png)
 
 ([Back to top](#sql-cheatsheet))
-## Data Definition Language (DDL)
+# Data-Definition-Language
 > DDL is a subset of SQL (Structured Query Language) that is used to define the structure of a relational database. DDL statements are used to create, modify, and delete database objects such as tables, views, indexes, and constraints.
 ### CREATE
 The CREATE command is used to create a new table with specified columns and data types. The table name, column names, and data types must be defined within the command.
@@ -90,7 +95,7 @@ A foreign key is a column or set of columns in a table that is used to establish
 In summary, primary keys are used to uniquely identify each record in a table and foreign keys are used to create links between tables, ensuring data integrity and consistency.
 
 ([Back to top](#sql-cheatsheet))
-## Data Manipulation Language (DML)
+# Data-Manipulation-Language
 > DML is a computer programming language used to retrieve, manipulate, and update data in a relational database. Examples of DML statements include SELECT, INSERT, UPDATE, and DELETE. These statements allow users to query the database for specific information, add new data to the database, change existing data, and delete unwanted data. DML is typically used in conjunction with Data Definition Language (DDL) statements, which are used to create and modify the structure of a database, such as creating tables and establishing relationships between them.
 ### INSERT
 The INSERT statement is used to insert new data into a table in the database. It allows the user to specify the columns and values of the new data being inserted.
@@ -135,7 +140,7 @@ The MERGE statement is used to either update or insert data into a table based o
 ```
 
 ([Back to top](#sql-cheatsheet))
-## Data Query Language (DQL)
+# Data-Query-Language
 > Data Query Language (DQL) is used to retrieve data from a relational database. DQL statements are used to select and retrieve data from one or more tables within a database. Examples of DQL statements include SELECT, GET and READ. These statements allow users to query the database for specific information and retrieve the data in a structured format. DQL statements are typically used by end-users to access and retrieve data from the database and are not used to make changes to the database structure or data. DQL statements are executed by the database management system (DBMS) and the results are returned to the user in the form of a table or other structured format.
 ### SELECT
 The SELECT statement is used to query data from one or more tables in a database.
@@ -217,7 +222,7 @@ SET operations are used to combine the result of two or more SELECT statements i
 ```
 
 ([Back to top](#sql-cheatsheet))
-## Views
+# Views
 > A view in a relational database is a virtual table that is based on the result of a SELECT statement. It does not store data itself, but rather it provides a way to access data from one or more tables in a specific way. Views can be used to simplify complex queries, to restrict access to certain columns of a table, or to present data in a specific format.
 ### CREATE
 The CREATE VIEW statement is used to create a new virtual table based on the result of a SELECT statement. It allows the user to specify the name of the view and the SELECT statement that defines the view.
@@ -252,7 +257,7 @@ The DROP VIEW statement is used to delete a view. It allows the user to remove a
 ```
 
 ([Back to top](#sql-cheatsheet))
-## Data Security
+# Data Security
 > Data security refers to the protection of digital information and systems from unauthorized access, use, disclosure, disruption, modification, or destruction. It encompasses a wide range of measures and technologies that are used to safeguard sensitive and confidential information.
 ### AUTHENTICATION
 Authentication is the process of verifying the identity of a user. In the context of data security, it is used to ensure that only authorized users are able to access specific databases or tables. The CREATE USER statement is used to create a new user with a specified password, and the GRANT statement is used to grant that user access to a specific database or table.
@@ -294,7 +299,7 @@ Encryption is the process of converting plain text into an unreadable format to 
     ALTER COLUMN sensitive_column
     ADD ENCRYPTION (TYPE = Deterministic, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256');
 ```
-## Data Backup
+# Data Backup
 > Data backup is the process of creating a copy of important data and storing it in a separate location for safekeeping. The purpose of data backup is to ensure that the data can be restored in case of a data loss event, such as a hardware failure, software corruption, cyber attack or natural disaster.
 
 ([Back to top](#sql-cheatsheet))
