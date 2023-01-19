@@ -13,16 +13,25 @@ Thank you for your contributions to this community-driven project!
 
 #### **- Use ***CTRL+F*** to search for something in the cheatsheet!**
 #### **- Find the ***TO-DO list*** of the cheatsheet [here](to-do.md).**
+<br>
 
 # Table of Content
+- [SQL Cheatsheet](#sql-cheatsheet)
+---
+- [About SQL](#about-sql)
 - [Data Definition Language](#data-definition-language)
 - [Data Manipulation Language](#data-manipulation-language)
 - [Data Query Language](#data-query-language)
 - [Views](#views)
 - [Data Security](#data-security)
 - [Data Backup](#data-backup)
+- [Other](#other)
+---
+- [Project](#other)
+<br>
 
-## About SQL (Structured Query Language)
+# About SQL 
+Structured Query Language
 ### Main Features
 - SQL is a declarative, set- and table-oriented language
 - SQL lacks features of a programming language
