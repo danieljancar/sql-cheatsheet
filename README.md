@@ -307,3 +307,14 @@ Encryption is the process of converting plain text into an unreadable format to 
 > Data backup is the process of creating a copy of important data and storing it in a separate location for safekeeping. The purpose of data backup is to ensure that the data can be restored in case of a data loss event, such as a hardware failure, software corruption, cyber attack or natural disaster.
 
 ([Back to top](#sql-cheatsheet))
+
+# Other 
+> Description
+> 
+([Back to top](#sql-cheatsheet))
+
+---
+## Thanks to all our contributors!
+<a href="https://github.com/Sigmale1000/SQL-Cheatsheet/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Sigmale1000/SQL-Cheatsheet" />
+</a>
