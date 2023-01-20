@@ -1,8 +1,14 @@
 # Data Security
 > Datensicherheit bezieht sich auf den Schutz digitaler Informationen und Systeme vor unbefugtem Zugriff, Verwendung, Offenlegung, Störung, Veränderung oder Zerstörung. Es umfasst eine Vielzahl von Maßnahmen und Technologien, die zum Schutz sensibler und vertraulicher Informationen eingesetzt werden.
 ## AUTHENTICATION
+<<<<<<< HEAD
 Authentifizierung ist der Prozess der Überprüfung der Identität eines Benutzers. Im Kontext der Datensicherheit wird es verwendet, um sicherzustellen, dass nur autorisierte Benutzer auf bestimmte Datenbanken oder Tabellen zugreifen können. Die CREATE USER-Anweisung wird verwendet, um einen neuen Benutzer mit einem angegebenen Kennwort zu erstellen, und die GRANT-Anweisung wird verwendet, um diesem Benutzer Zugriff auf eine bestimmte Datenbank oder Tabelle zu gewähren.
 > Dieser Befehl wird verwendet, um einen neuen Benutzer mit einem bestimmten Passwort zu erstellen
+=======
+Authentication is the process of verifying the identity of a user. In the context of data security, it is used to ensure that only authorized users are able to access specific databases or tables. The CREATE USER statement is used to create a new user with a specified password, and the GRANT statement is used to grant that user access to a specific database or table.
+> This command is used to create a new user with a specified password
+> U normally need to use the master database to do something with users ```use master```
+>>>>>>> c19ec8220ce5c7a5caa4056aeac7fe29da25d4b2
 ```sql
     CREATE USER user_name IDENTIFIED BY 'password';
 ```

@@ -3,6 +3,7 @@
 ## AUTHENTICATION
 Authentication is the process of verifying the identity of a user. In the context of data security, it is used to ensure that only authorized users are able to access specific databases or tables. The CREATE USER statement is used to create a new user with a specified password, and the GRANT statement is used to grant that user access to a specific database or table.
 > This command is used to create a new user with a specified password
+> U normally need to use the master database to do something with users ```use master```
 ```sql
     CREATE USER user_name IDENTIFIED BY 'password';
 ```

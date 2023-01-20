@@ -1,39 +1,37 @@
-![SQL banner](../images/sql_banner1.jpeg)
-
 # SQL Cheatsheet 📄
 
-Willkommen to the SQL Cheatsheet! Here you will find a community currated collection of commonly used SQL commands and statements.
+Willkommen beim SQL Cheatsheet! Hier findest du eine von der Community zusammengestellte Sammlung von häufig verwendeten SQL-Befehlen und Anweisungen.
 
-## How to use 🔍
+## Wie man es benutzt 🔍
 
-This cheatsheet is intended as a quick reference guide for those who are already familiar with SQL. If you are new to SQL, we recommend starting with a more comprehensive tutorial or guide before using this cheatsheet.
+Dieses Cheatsheet dient als schneller Referenzführer für diejenigen, die bereits mit SQL vertraut sind. Wenn du neu in SQL bist, empfehlen wir dir, mit einem umfassenderen Tutorial oder Leitfaden zu beginnen, bevor du dieses Cheatsheet verwendest.
 
-## How to contribute 🤝
+## Wie man beiträgt 🤝
 
-We welcome contributions from the community to help make this cheatsheet even better! If you would like to contribute, please fork the repository and submit a pull request with your changes.
+Wir begrüßen Beiträge der Community, um dieses Cheatsheet noch besser zu machen! Wenn du beitragen möchtest, forke das Repository und reiche einen Pull-Request mit deinen Änderungen ein.
 
-## Where to find it 🔗
+## Wo man es findet 🔗
 
-- The Cheatsheet / Documentation can be found [here](https://sqlcheatsheet.sigmale.dev).
+- Das Cheatsheet / die Dokumentation findest du [hier](https://sqlcheatsheet.sigmale.dev).
 
-- The Github repository can be found [here](https://github.com/Sigmale1000/SQL-Cheatsheet).
+- Das Github-Repository findest du [hier](https://github.com/Sigmale1000/SQL-Cheatsheet).
 
 ### Download 💾
 
-- The project uses [Docsify](https://docsify.js.org)
+- Das Projekt verwendet [Docsify](https://docsify.js.org)
 
-To run the project for contribution:
-- Install the Node package with ```npm i docsify-cli -g```
-- Preview the site with ```docsify serve docs```
+Um das Projekt lokal zum Laufen zu bringen:
+- Installiere das Node-Paket mit ```npm i docsify-cli -g```
+- Führe die Webseite lokal aus mit ```docsify serve docs```
 
-## Additional Resources 📚
+## Zusätzliche Ressourcen 📚
 
-- [SQLBolt](https://sqlbolt.com/) - A series of interactive lessons for SQL beginners
-- [W3Schools SQL Tutorial](https://www.w3schools.com/sql/) - A beginner-friendly tutorial on SQL
-- [SQL Zoo](https://sqlzoo.net/) - A collection of interactive tutorials on SQL
+- [SQLBolt](https://sqlbolt.com/) - Eine Reihe von interaktiven Lektionen für SQL-Anfänger
+- [W3Schools SQL Tutorial](https://www.w3schools.com/sql/) - Ein Anfängerfreundliches Tutorial zu SQL
+- [SQL Zoo](https://sqlzoo.net/) - Eine Sammlung von interaktiven Tutorials zu SQL
 
 ------
-**Thanks to all our contributors:**
+**Danke an alle unsere Mitwirkenden:**
 
 <a href="https://github.com/Sigmale1000/SQL-Cheatsheet/graphs/contributors">
   <img anon={1} max={100} src="https://contrib.rocks/image?repo=Sigmale1000/SQL-Cheatsheet" />

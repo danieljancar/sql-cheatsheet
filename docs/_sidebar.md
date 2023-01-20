@@ -9,7 +9,6 @@
   - [Data Definition Language](ddl.md)
   - [Data Manipulation Language](dml.md)
   - [Data Query Language](dql.md)
-  - [Data Control Language](dcl.md)
     - [Transactions](transaction.md)
     - [Views](view.md)
     - [Functions](function.md)
@@ -33,3 +32,4 @@
 - About the Project
 
   - [Get Started](README.md)
+  - [📝 Edit Documentation](https://github.com/Sigmale1000/SQL-Cheatsheet)
