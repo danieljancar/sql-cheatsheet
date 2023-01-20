@@ -20,9 +20,9 @@ Wir begrüßen Beiträge der Community, um dieses Cheatsheet noch besser zu mach
 
 - Das Projekt verwendet [Docsify](https://docsify.js.org)
 
-Um das Projekt zur Beitrag zu laufen:
+Um das Projekt lokal zum Laufen zu bringen:
 - Installiere das Node-Paket mit ```npm i docsify-cli -g```
-- Vorschau der Seite mit ```docsify serve docs```
+- Führe die Webseite lokal aus mit ```docsify serve docs```
 
 ## Zusätzliche Ressourcen 📚
 
