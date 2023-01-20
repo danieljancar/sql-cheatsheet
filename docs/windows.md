@@ -24,7 +24,6 @@ There are many different RDBMS and DBs available, such as MySQL, Oracle, Microso
 
 - [MySQL](https://www.mysql.com/) is a popular, open-source RDBMS that is widely used in web applications and small to medium-sized businesses.
 - [Oracle](https://www.oracle.com/database/) is a powerful, enterprise-level RDBMS that is widely used in large organizations and mission-critical applications.
-- [Azure Data Studio](https://azure.microsoft.com/) is a powerful RDBMS which also display data grahpics.
 - [PostgreSQL](https://www.postgresql.org/) is a powerful, open-source RDBMS that is known for its scalability and extensibility.
 - [SQLite](https://www.sqlite.org/) is a lightweight, file-based RDBMS that is often used in embedded systems and mobile applications.
 - [MariaDB](https://mariadb.org/) is a fork of MySQL and is often considered as an enhanced, open-source version of MySQL.
