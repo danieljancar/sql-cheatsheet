@@ -1,0 +1,32 @@
+## Installing SQL, RDBMS, and DBs on Linux 🐧
+
+SQL, or Structured Query Language, is a programming language used for managing and manipulating relational databases. In order to use SQL on a Linux machine, you will need to install a relational database management system (RDBMS) such as MySQL, Oracle, or PostgreSQL.
+
+Here are some steps to help you get started with installing SQL and a RDBMS on a Linux machine:
+
+1. Use your package manager to install a RDBMS of your choice, such as MySQL, Oracle or PostgreSQL. For example, on Ubuntu you can use the following command to install MySQL: `sudo apt-get install mysql-server`
+2. Download and install a SQL client, such as [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) or [pgAdmin](https://www.pgadmin.org/download/linux/).
+3. Once the installation is complete, you can start the SQL client and connect to your RDBMS.
+4. You can also use additional tools such as [phpMyAdmin](https://www.phpmyadmin.net/) for web-based management of MySQL and MariaDB databases.
+
+## Using Docker for SQL and RDBMS on Linux 🐳
+Docker is a popular tool for containerizing applications and services. It can also be used to run a SQL server and RDBMS on a Linux machine. Here are some steps to help you get started with using Docker for SQL and RDBMS on a Linux machine:
+
+1. Install [Docker](https://docs.docker.com/engine/install/) on your Linux machine
+2. Search for and download a SQL server and RDBMS Docker image, such as [MySQL](https://hub.docker.com/_/mysql), [Oracle](https://hub.docker.com/_/oracle-database-enterprise-edition) or [PostgreSQL](https://hub.docker.com/_/postgres).
+3. Start the Docker image and connect to it using a SQL client or web-based management tool.
+4. You can also use tools such as [phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/) for web-based management of your databases.
+
+It is important to note that the installation process may vary depending on the distribution of Linux you are using and the specific RDBMS you have chosen. Be sure to refer to the official documentation for the specific RDBMS and version you are installing for the most up-to-date instructions.
+
+## Different DBs for Linux 🐧
+There are many different RDBMS and DBs available for Linux, such as MySQL, Oracle, PostgreSQL, SQLite, and MariaDB. Each one has its own strengths and weaknesses, and the right choice for you will depend on your specific needs and use case.
+
+- [MySQL](https://www.mysql.com/) is a popular, open-source RDBMS that is widely used in web applications and small to medium-sized businesses.
+- [Oracle](https://www.oracle.com/database/) is a powerful, enterprise-level RDBMS that is widely used in large organizations and mission-critical applications.
+- [PostgreSQL](https://www.postgresql.org/) is a powerful, open-source RDBMS that is known for its scalability and extensibility.
+- [SQLite](https://www.sqlite.org/) is a lightweight, file-based RDBMS that is often used in embedded systems and mobile applications.
+- [MariaDB](https://mariadb.org/) is a fork of MySQL and is often considered as an enhanced, open-source version of MySQL.
+
+You can download and install any of these DBs as per your need and suitability. <br>
+**Happy coding! 🚀**
