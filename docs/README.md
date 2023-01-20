@@ -31,3 +31,10 @@ To run the project for contribution:
 - [SQLBolt](https://sqlbolt.com/) - A series of interactive lessons for SQL beginners
 - [W3Schools SQL Tutorial](https://www.w3schools.com/sql/) - A beginner-friendly tutorial on SQL
 - [SQL Zoo](https://sqlzoo.net/) - A collection of interactive tutorials on SQL
+
+------
+**Thanks to all our contributors:**
+
+<a href="https://github.com/Sigmale1000/SQL-Cheatsheet/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Sigmale1000/SQL-Cheatsheet" />
+</a>
