@@ -9,7 +9,6 @@
   - [Datendefinitionssprache](de/ddl.md)
   - [Datenmanipulationssprache](de/dml.md)
   - [Datenabfragesprache](de/dql.md)
-  - [Datenkontrollsprache](de/dcl.md)
     - [Transaktionen](de/transaction.md)
     - [Ansichten](de/view.md)
     - [Funktionen](de/function.md)
