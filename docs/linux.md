@@ -28,4 +28,5 @@ There are many different RDBMS and DBs available for Linux, such as MySQL, Oracl
 - [SQLite](https://www.sqlite.org/) is a lightweight, file-based RDBMS that is often used in embedded systems and mobile applications.
 - [MariaDB](https://mariadb.org/) is a fork of MySQL and is often considered as an enhanced, open-source version of MySQL.
 
-You can download and install any of these DBs as per your need and suitability. Happy coding! 🚀
+You can download and install any of these DBs as per your need and suitability. <br>
+**Happy coding! 🚀**
