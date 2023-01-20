@@ -14,11 +14,9 @@ We welcome contributions from the community to help make this cheatsheet even be
 
 ## Where to find it 🔗
 
-The Cheatsheet / Documentation can be found in the following location:
-https://sqlcheatsheet.sigmale.dev
+- The Cheatsheet / Documentation can be found [here](https://sqlcheatsheet.sigmale.dev).
 
-The Github repository can be found in the following location:
-https://github.com/Sigmale1000/SQL-Cheatsheet
+- The Github repository can be found [here](https://github.com/Sigmale1000/SQL-Cheatsheet).
 
 ### Download 💾
 
