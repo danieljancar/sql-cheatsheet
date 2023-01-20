@@ -2,7 +2,7 @@
 
   - [What is SQL?](sql.md)
   - [Data Types](data-types.md)
-  - [History](history.md)
+  - [History of SQL](history.md)
 
 - Language Areas
 
@@ -20,6 +20,7 @@
   - [Data Backup](data-backup.md)    
 
 - Other
+  - [Relational Databases](rdb.md)   
   - [SQL for MacOS](mac.md)   
 
 - About the Project
