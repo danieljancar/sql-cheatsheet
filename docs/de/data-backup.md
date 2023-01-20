@@ -1,2 +1,2 @@
 # Data Backup
-> Data backup is the process of creating a copy of important data and storing it in a separate location for safekeeping. The purpose of data backup is to ensure that the data can be restored in case of a data loss event, such as a hardware failure, software corruption, cyber attack or natural disaster.
+> Datensicherung ist der Vorgang, bei dem eine Kopie wichtiger Daten erstellt und zur sicheren Aufbewahrung an einem separaten Ort gespeichert wird. Der Zweck der Datensicherung besteht darin, sicherzustellen, dass die Daten im Falle eines Datenverlustereignisses wie Hardwareausfall, Softwarebeschädigung, Cyberangriff oder Naturkatastrophe wiederhergestellt werden können.
