@@ -8,7 +8,11 @@ The Informations Chapter is used to give out specified Informations about SQL.
 ```
 ## EXEC
 The EXEC command is used to change the names in SQL
-> This command is used to change the name in a specific table. "table_name" is only used as a placeholder and needs to be changed.
+> This command is used to change the name in a specific column or table.
+```sql       
+    EXEC sp_rename 'schema_name', 'descripton', 'COLUMN';
+```
+> This command is used to show the informations in a specific table.
 ```sql       
     EXEC sp_columns table_name
 ```
