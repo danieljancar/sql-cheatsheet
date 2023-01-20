@@ -4,6 +4,8 @@ A relational database is a type of database management system (DBMS) that stores
 ## The Structure of Relational Databases 🧱
 A relational database is composed of a set of tables, also known as relations, each with a unique name. Each table is made up of rows and columns, where each row represents a single record and each column represents a specific type of data. The columns in a table are also known as attributes or fields, and each column has a unique name and a specific data type.
 
+![Relational database structure](https://assets-global.website-files.com/620d42e86cb8ec4d0839e59d/620d42e96cb8ec659e39f462_99bf70d46cc247be878de9d3a88f0c44.png)
+
 ## The Concept of Primary Key 🔑
 Each table in a relational database has a primary key, which is a unique column or set of columns that can be used to identify a specific record. The primary key is used to establish relationships between tables, also known as referential integrity.
 
