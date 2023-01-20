@@ -22,5 +22,4 @@
 
 - About the Project
 
-  - [The project](project.md)
-  - [Contribute](contribute.md)
+  - [Get Started](README.md)
