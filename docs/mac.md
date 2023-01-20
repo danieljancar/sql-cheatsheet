@@ -18,14 +18,15 @@ Docker is a popular tool for containerizing applications and services. It can al
 4. You can also use tools such as [phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/) for web-based management of your databases.
 
 ## Docker Code-Example
-Option1:
-```sql
+> Long version:
+```cmd
     cd diretory/of/file (Usualy cd Downloads)
     docker ps
     docker cp file_name.bak sql:/tmp
 ```
-Option2:
-```sql
+
+> Short version:
+```cmd
     docker cp /full/file/dir/with/file_name.bak sql:/tmp
 ```
 
