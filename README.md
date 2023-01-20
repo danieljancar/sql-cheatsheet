@@ -15,6 +15,7 @@ Thank you for your contributions to this community-driven project!
 
 ---
 ## Thanks to all our contributors!
-[![All Contributors](https://img.shields.io/github/all-contributors/Sigmale1000/SQL-Cheatsheet?color=ee8449&style=flat-square)](#contributors)
-
+<a href="https://github.com/Sigmale1000/SQL-Cheatsheet/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Sigmale1000/SQL-Cheatsheet" />
+  
 ([Back to top](#sql-cheatsheet))
