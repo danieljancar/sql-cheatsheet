@@ -32,3 +32,4 @@
 - About the Project
 
   - [Über das Cheatsheet](de/README.md)
+  - [📝 Edit Documentation](https://github.com/Sigmale1000/SQL-Cheatsheet)
