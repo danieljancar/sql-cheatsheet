@@ -13,6 +13,7 @@
     - [Transactions](transaction.md)
     - [Views](view.md)
     - [Functions](function.md)
+    - [Logical Operations](logical-operations.md)
 
 - Data Safety
   - [Data Security](data-security.md)    
