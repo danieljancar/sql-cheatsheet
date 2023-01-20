@@ -1,7 +1,7 @@
 - About SQL
 
   - [What is SQL?](sql.md)
-  - [Data Types](data-types.md)
+  - [Data and Data Types](data-types.md)
   - [History of SQL](history.md)
 
 - Language Areas
