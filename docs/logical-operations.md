@@ -33,7 +33,7 @@
     SELECT id, column2, column3 FROM table1 WHERE id IN (1, 2, 3);
 ```
 ## LIKE
-> Für komplexere Text-Abfragen bietet sich LIKE an. LIKE sucht nach einem Muster in einem String und wird deshalb auch als Mustervergleich bezeichnet. Dabei gibt es verschiedene Platzhalter:
+> LIKE is ideal for more complex text queries. LIKE searches for a pattern in a string and is therefore also known as pattern matching. There are different placeholders:
 ```sql
     -- % -> Any numbers of characters 
     SELECT id, column2, column3 FROM table1 WHERE column2 LIKE '%peter%';
