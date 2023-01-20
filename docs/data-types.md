@@ -9,6 +9,9 @@ SQL supports several different datatypes, including:
 - Binary data types (e.g. BLOB, BINARY)
 
 Each datatype has its own set of associated functions and operators, which can be used to perform various operations on the data.
+<br>
+
+![Data types table](https://renenyffenegger.ch/notes/development/databases/SQL/data-types/hierarchy.png)
 
 ## Numeric Data Types 🔢
 Numeric data types are used to store numeric values, such as integers and decimal numbers. Some examples of numeric data types include INT (for integers), FLOAT (for floating-point numbers), and DECIMAL (for fixed-point numbers).

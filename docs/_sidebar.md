@@ -21,6 +21,7 @@
 
 - Other
   - [Relational Databases](rdb.md)   
+  - [SQL for Windows](windows.md)   
   - [SQL for MacOS](mac.md)   
 
 - About the Project
