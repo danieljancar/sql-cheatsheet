@@ -18,6 +18,14 @@ https://sqlcheatsheet.sigmale.dev
 The Github repository can be found in the following location:
 https://github.com/Sigmale1000/SQL-Cheatsheet
 
+### Download 💾
+
+- The project uses [Docsify](https://docsify.js.org)
+
+To run the project for contribution:
+- Install the Node package with ```npm i docsify-cli -g```
+- Preview the site with ```docsify serve docs```
+
 ## Additional Resources 📚
 
 - [SQLBolt](https://sqlbolt.com/) - A series of interactive lessons for SQL beginners
