@@ -36,5 +36,5 @@ To run the project for contribution:
 **Thanks to all our contributors:**
 
 <a href="https://github.com/Sigmale1000/SQL-Cheatsheet/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Sigmale1000/SQL-Cheatsheet" />
+  <img anon={1} max={100} src="https://contrib.rocks/image?repo=Sigmale1000/SQL-Cheatsheet" />
 </a>
