@@ -16,13 +16,19 @@
     - [Logical Operations](logical-operations.md)
 
 - Data Safety
+
   - [Data Security](data-security.md)    
   - [Data Backup](data-backup.md)    
 
 - Other
+
   - [Relational Databases](rdb.md)   
+
+- Installation 
+
   - [SQL for Windows](windows.md)   
   - [SQL for MacOS](mac.md)   
+  - [SQL for Linux](linux.md)   
 
 - About the Project
 
