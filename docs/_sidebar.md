@@ -12,6 +12,7 @@
   - [Data Control Language](dcl.md)
     - [Transactions](transaction.md)
     - [Views](view.md)
+    - [Functions](function.md)
 
 - Data Safety
   - [Data Security](data-security.md)    
