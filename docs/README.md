@@ -1,6 +1,6 @@
 # SQL Cheatsheet 📄
 
-Welcome to the SQL Cheatsheet! Here you will find a collection of commonly used SQL commands and statements.
+Welcome to the SQL Cheatsheet! Here you will find a community currated collection of commonly used SQL commands and statements.
 
 ## How to use 🔍
 
