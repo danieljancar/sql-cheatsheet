@@ -17,6 +17,12 @@ Docker is a popular tool for containerizing applications and services. It can al
 3. Start the Docker image and connect to it using a SQL client.
 4. You can also use tools such as [phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/) for web-based management of your databases.
 
+## Docker Code-Example
+```sql
+    docker ps
+    docker cp file_name.bak sql:/tmp
+```
+
 ## Different DBs for macOS 🍎
 There are many different RDBMS and DBs available for macOS, such as MySQL, Oracle, Microsoft SQL Server, PostgreSQL, SQLite, and MariaDB. Each one has its own strengths and weaknesses, and the right choice for you will depend on your specific needs and use case.
 
