@@ -1,3 +1,5 @@
+![SQL banner](images/sql_banner1.jpeg)
+
 # SQL Cheatsheet 📄
 
 Welcome to the SQL Cheatsheet! Here you will find a community currated collection of commonly used SQL commands and statements.
