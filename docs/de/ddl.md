@@ -1,72 +1,72 @@
-# Data Definition Language
-> DDL is a subset of SQL (Structured Query Language) that is used to define the structure of a relational database. DDL statements are used to create, modify, and delete database objects such as tables, views, indexes, and constraints.
-## Informations
-The Informations Chapter is used to give out specified Informations about SQL.
-> This command is used to give out your own name in a specific table.
-```sql       
-    SELECT 'your_name' AS 'Your Name'
+# Datendefinitionssprache
+> DDL ist eine Teilmenge von SQL (Structured Query Language), die verwendet wird, um die Struktur einer relationalen Datenbank zu definieren. DDL-Anweisungen werden zum Erstellen, Ändern und Löschen von Datenbankobjekten wie Tabellen, Ansichten, Indizes und Einschränkungen verwendet.
+## Informationen
+Das Informationskapitel dient dazu, bestimmte Informationen über SQL herauszugeben.
+> Dieser Befehl wird verwendet, um den eigenen Namen in einer bestimmten Tabelle auszugeben.
+```SQL
+    WÄHLEN Sie „Ihr_Name“ als „Ihr Name“
 ```
 ## EXEC
-The EXEC command is used to change the names in SQL
-> This command is used to change the name in a specific column or table.
-```sql       
+Der EXEC-Befehl wird verwendet, um die Namen in SQL zu ändern
+> Dieser Befehl wird verwendet, um den Namen in einer bestimmten Spalte oder Tabelle zu ändern.
+```SQL
     EXEC sp_rename 'schema_name', 'descripton', 'COLUMN';
 ```
-> This command is used to show the informations in a specific table.
-```sql       
-    EXEC sp_columns table_name
+> Dieser Befehl wird verwendet, um die Informationen in einer bestimmten Tabelle anzuzeigen.
+```SQL
+    EXEC sp_columns Tabellenname
 ```
 ## CREATE
-The CREATE command is used to create a new table with specified columns and data types. The table name, column names, and data types must be defined within the command.
-> This command is used to create a new table with specified columns and data types
-```sql       
-    CREATE TABLE table_name (
-    column1 data_type constraint,
-    column2 data_type constraint,
+Der Befehl CREATE wird verwendet, um eine neue Tabelle mit angegebenen Spalten und Datentypen zu erstellen. Der Tabellenname, die Spaltennamen und die Datentypen müssen innerhalb des Befehls definiert werden.
+> Dieser Befehl wird verwendet, um eine neue Tabelle mit bestimmten Spalten und Datentypen zu erstellen
+```SQL
+    CREATE TABLE Tabellenname (
+    Spalte1 Datentyp Einschränkung,
+    Spalte2 Datentyp Einschränkung,
     );
 ```
 ## ALTER
-The ALTER command is used to make changes to an existing table, such as adding a new column, modifying an existing column, or deleting a column.
-> This command is used to add a new column to an existing table
-```sql
-    ALTER TABLE table_name
-    ADD column_name data_type constraint;
+Der Befehl ALTER wird verwendet, um Änderungen an einer vorhandenen Tabelle vorzunehmen, z. B. eine neue Spalte hinzuzufügen, eine vorhandene Spalte zu ändern oder eine Spalte zu löschen.
+> Dieser Befehl wird verwendet, um einer bestehenden Tabelle eine neue Spalte hinzuzufügen
+```SQL
+    ALTER TABLE Tabellenname
+    Einschränkung Spaltenname Datentyp HINZUFÜGEN;
 ```
-> This command is used to modify an existing column in a table
-```sql
-    ALTER TABLE table_name
-    MODIFY column_name data_type constraint;
+> Dieser Befehl wird verwendet, um eine vorhandene Spalte in einer Tabelle zu ändern
+```SQL
+    ALTER TABLE Tabellenname
+    MODIFY Spaltenname Datentyp Einschränkung;
 ```
 
-> This command is used to delete a column from an existing table
-```sql
-    ALTER TABLE table_name
-    DROP COLUMN column_name;
+> Dieser Befehl wird verwendet, um eine Spalte aus einer bestehenden Tabelle zu löschen
+```SQL
+    ALTER TABLE Tabellenname
+    DROP COLUMN Spaltenname;
 ```
 ## DROP
-The DROP command is used to delete an existing table, its structure, and all its data permanently from the database. It can also be used to delete other database objects such as views, indexes, and sequences. Once a table is dropped, all the data stored in it will be lost and cannot be recovered. It is important to use this command with caution as it cannot be undone.
-> This command is used to delete an existing table and all its data
-```sql
-    DROP TABLE table_name;
+Der DROP-Befehl wird verwendet, um eine bestehende Tabelle, ihre Struktur und alle ihre Daten dauerhaft aus der Datenbank zu löschen. Es kann auch verwendet werden, um andere Datenbankobjekte wie Ansichten, Indizes und Sequenzen zu löschen. Sobald eine Tabelle gelöscht wird, gehen alle darin gespeicherten Daten verloren und können nicht wiederhergestellt werden. Es ist wichtig, diesen Befehl mit Vorsicht zu verwenden, da er nicht rückgängig gemacht werden kann.
+> Dieser Befehl wird verwendet, um eine bestehende Tabelle und alle ihre Daten zu löschen
+```SQL
+    DROP TABLE Tabellenname;
 ```
 ## TRUNCATE
-The TRUNCATE command is used to delete all data from an existing table, but it keeps the table structure and its associated objects such as indexes, triggers, and constraints. Unlike the DROP command, TRUNCATE does not generate any undo logs, making it faster and more efficient for large tables with many rows. However, it also does not fire any DELETE triggers, and the data deleted cannot be recovered. It is important to use this command with caution as it cannot be undone.
-> This command is used to delete all data from an existing table, but keeps the table structure
-```sql
-    TRUNCATE TABLE table_name;
+Der TRUNCATE-Befehl wird verwendet, um alle Daten aus einer vorhandenen Tabelle zu löschen, behält jedoch die Tabellenstruktur und die zugehörigen Objekte wie Indizes, Trigger und Einschränkungen bei. Im Gegensatz zum DROP-Befehl generiert TRUNCATE keine Rückgängig-Protokolle, wodurch es für große Tabellen mit vielen Zeilen schneller und effizienter wird. Es löst jedoch auch keine DELETE-Trigger aus, und die gelöschten Daten können nicht wiederhergestellt werden. Es ist wichtig, diesen Befehl mit Vorsicht zu verwenden, da er nicht rückgängig gemacht werden kann.
+> Dieser Befehl wird verwendet, um alle Daten aus einer bestehenden Tabelle zu löschen, behält aber die Tabellenstruktur bei
+```SQL
+    TRUNCATE TABLE Tabellenname;
 ```
-## SQL KEYS
-In SQL, keys are used to establish and enforce relationships between tables in a database. There are two main types of keys: primary keys and foreign keys.
-**Primary Key**
-A primary key is a unique identifier for each row in a table. It is used to enforce the integrity of the data and to ensure that there are no duplicate values in the table. Only one primary key can be defined for a table, and it cannot contain null values. The primary key is defined using the PRIMARY KEY constraint.
-> This command is used to specify a column or set of columns as the primary key for a table
-```sql
-    PRIMARY KEY (column1, column2, ...)
+## SQL-SCHLÜSSEL
+In SQL werden Schlüssel verwendet, um Beziehungen zwischen Tabellen in einer Datenbank herzustellen und durchzusetzen. Es gibt zwei Haupttypen von Schlüsseln: Primärschlüssel und Fremdschlüssel.
+**Primärschlüssel**
+Ein Primärschlüssel ist eine eindeutige Kennung für jede Zeile in einer Tabelle. Es wird verwendet, um die Integrität der Daten zu erzwingen und sicherzustellen, dass es keine doppelten Werte in der Tabelle gibt. Für eine Tabelle kann nur ein Primärschlüssel definiert werden, der keine Nullwerte enthalten darf. Der Primärschlüssel wird mit der PRIMARY KEY-Einschränkung definiert.
+> Dieser Befehl wird verwendet, um eine Spalte oder einen Satz von Spalten als Primärschlüssel für eine Tabelle anzugeben
+```SQL
+    PRIMÄRSCHLÜSSEL (Spalte1, Spalte2, ...)
 ```
-**Foreign Key**
-A foreign key is a column or set of columns in a table that is used to establish a link between the data in two tables. The foreign key references a primary key in another table, creating a link between the two tables. This link is used to enforce referential integrity, which ensures that data in the related tables is consistent and that there are no orphaned records. The foreign key is defined using the FOREIGN KEY constraint.
-> This command is used to specify a foreign key constraint on a column in a table
-```sql
-    FOREIGN KEY (column) REFERENCES referenced_table(referenced_column)
+**Foreignschlüssel**
+Ein Fremdschlüssel ist eine Spalte oder eine Gruppe von Spalten in einer Tabelle, die verwendet wird, um eine Verknüpfung zwischen den Daten in zwei Tabellen herzustellen. Der Fremdschlüssel referenziert einen Primärschlüssel in einer anderen Tabelle und stellt eine Verknüpfung zwischen den beiden Tabellen her. Dieser Link wird verwendet, um die referenzielle Integrität zu erzwingen, wodurch sichergestellt wird, dass die Daten in den zugehörigen Tabellen konsistent sind und keine verwaisten Datensätze vorhanden sind. Der Fremdschlüssel wird mit der Einschränkung FOREIGN KEY definiert.
+> Dieser Befehl wird verwendet, um eine Fremdschlüsseleinschränkung für eine Spalte in einer Tabelle anzugeben
+```SQL
+    FOREIGN KEY (Spalte) REFERENCES referenced_table(referenced_column)
 ```
-In summary, primary keys are used to uniquely identify each record in a table and foreign keys are used to create links between tables, ensuring data integrity and consistency.
+Zusammenfassend werden Primärschlüssel verwendet, um jeden Datensatz in einer Tabelle eindeutig zu identifizieren, und Fremdschlüssel werden verwendet, um Verknüpfungen zwischen Tabellen herzustellen, um die Datenintegrität und -konsistenz sicherzustellen.
