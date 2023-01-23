@@ -5,8 +5,17 @@ Authentication is the process of verifying the identity of a user. In the contex
 > This command is used to create a new user with a specified password
 > U normally need to use the master database to do something with users ```use master```
 ```sql
-    CREATE USER user_name IDENTIFIED BY 'password';
+    USE master;
+    CREATE LOGIN login_name
+    WITH PASSWORD = 'passwort', CHECK_POLICY = OFF;
 ```
+> Login for a specific user
+```sql
+    USE myDatabase;
+    CREATE USER user_name FOR LOGIN login_name;
+```
+
+
 > This command is used to grant a user access to a specific database or table
 ```sql
     GRANT SELECT, INSERT, UPDATE, DELETE ON table_name TO user_name;
