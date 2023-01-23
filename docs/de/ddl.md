@@ -4,7 +4,7 @@
 Das Informationskapitel dient dazu, bestimmte Informationen über SQL herauszugeben.
 > Dieser Befehl wird verwendet, um den eigenen Namen in einer bestimmten Tabelle auszugeben.
 ```SQL
-    WÄHLEN Sie „Ihr_Name“ als „Ihr Name“
+    WÄHLEN Sie „Ihr_Name“ AS „Ihr Name“
 ```
 ## EXEC
 Der EXEC-Befehl wird verwendet, um die Namen in SQL zu ändern
@@ -30,7 +30,7 @@ Der Befehl ALTER wird verwendet, um Änderungen an einer vorhandenen Tabelle vor
 > Dieser Befehl wird verwendet, um einer bestehenden Tabelle eine neue Spalte hinzuzufügen
 ```SQL
     ALTER TABLE Tabellenname
-    Einschränkung Spaltenname Datentyp HINZUFÜGEN;
+    Einschränkung Spaltenname Datentyp constraint;
 ```
 > Dieser Befehl wird verwendet, um eine vorhandene Spalte in einer Tabelle zu ändern
 ```SQL
@@ -61,7 +61,7 @@ In SQL werden Schlüssel verwendet, um Beziehungen zwischen Tabellen in einer Da
 Ein Primärschlüssel ist eine eindeutige Kennung für jede Zeile in einer Tabelle. Es wird verwendet, um die Integrität der Daten zu erzwingen und sicherzustellen, dass es keine doppelten Werte in der Tabelle gibt. Für eine Tabelle kann nur ein Primärschlüssel definiert werden, der keine Nullwerte enthalten darf. Der Primärschlüssel wird mit der PRIMARY KEY-Einschränkung definiert.
 > Dieser Befehl wird verwendet, um eine Spalte oder einen Satz von Spalten als Primärschlüssel für eine Tabelle anzugeben
 ```SQL
-    PRIMÄRSCHLÜSSEL (Spalte1, Spalte2, ...)
+    PRIMARY KEY (Spalte1, Spalte2, ...)
 ```
 **Foreignschlüssel**
 Ein Fremdschlüssel ist eine Spalte oder eine Gruppe von Spalten in einer Tabelle, die verwendet wird, um eine Verknüpfung zwischen den Daten in zwei Tabellen herzustellen. Der Fremdschlüssel referenziert einen Primärschlüssel in einer anderen Tabelle und stellt eine Verknüpfung zwischen den beiden Tabellen her. Dieser Link wird verwendet, um die referenzielle Integrität zu erzwingen, wodurch sichergestellt wird, dass die Daten in den zugehörigen Tabellen konsistent sind und keine verwaisten Datensätze vorhanden sind. Der Fremdschlüssel wird mit der Einschränkung FOREIGN KEY definiert.
