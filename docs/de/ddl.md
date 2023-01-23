@@ -4,7 +4,7 @@
 Das Informationskapitel dient dazu, bestimmte Informationen über SQL herauszugeben.
 > Dieser Befehl wird verwendet, um den eigenen Namen in einer bestimmten Tabelle auszugeben.
 ```SQL
-    SELECT Sie „Ihr_Name“ AS „Ihr Name“
+    SELECT „Ihr_Name“ AS „Mein Name“
 ```
 ## EXEC
 Der EXEC-Befehl wird verwendet, um die Namen in SQL zu ändern
