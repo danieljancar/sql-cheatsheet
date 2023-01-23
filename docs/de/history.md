@@ -1,8 +1,8 @@
-# The History of SQL 📜
+# Die Geschichte von SQL 📜
 
-SQL, or Structured Query Language, is a programming language that has been widely used for managing and manipulating relational databases since the 1970s. 
+SQL oder Structured Query Language ist eine Programmiersprache, die seit den 1970er Jahren für die Verwaltung und Bearbeitung relationaler Datenbanken weit verbreitet ist.
 
-The development of SQL can be traced back to IBM's [System R project](https://en.wikipedia.org/wiki/System_R), which aimed to create a relational database management system. In the early 1970s, IBM researcher Donald D. Chamberlin and Raymond F. Boyce developed a language called SEQUEL (Structured English Query Language), which was later renamed to SQL. 
+Die Entwicklung von SQL lässt sich auf das [System R-Projekt] von IBM (https://en.wikipedia.org/wiki/System_R) zurückführen, das darauf abzielte, ein relationales Datenbankverwaltungssystem zu schaffen. In den frühen 1970er Jahren entwickelten die IBM-Forscher Donald D. Chamberlin und Raymond F. Boyce eine Sprache namens SEQUEL (Structured English Query Language), die später in SQL umbenannt wurde.
 
 **Timeline of key events in SQL history:**
 - 1970s: IBM researchers develop SEQUEL (later renamed to SQL) as part of the [System R project](https://en.wikipedia.org/wiki/System_R)
