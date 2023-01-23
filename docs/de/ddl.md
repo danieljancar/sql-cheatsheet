@@ -25,6 +25,22 @@ Der Befehl CREATE wird verwendet, um eine neue Tabelle mit angegebenen Spalten u
     Spalte2 Datentyp constraint,
     );
 ```
+> Eine Tabelle mit Schema erstellen
+```SQL
+    CREATE TABLE [schema.]tabelle(
+    spalte1 datentyp [ NULL | NOT NULL ],
+    spalte2 datentyp [ NULL | NOT NULL ],
+    spalte3 datentyp [ NULL | NOT NULL ],
+   ....
+);
+```
+## Schema
+> Innerhalb der neu erstellten Datenbank erstellen wir nun ein neues Schema:
+```SQL
+    USE m106;
+    GO
+    CREATE SCHEMA schema106;
+```
 ## ALTER
 Der Befehl ALTER wird verwendet, um Änderungen an einer vorhandenen Tabelle vorzunehmen, z. B. eine neue Spalte hinzuzufügen, eine vorhandene Spalte zu ändern oder eine Spalte zu löschen.
 > Dieser Befehl wird verwendet, um einer bestehenden Tabelle eine neue Spalte hinzuzufügen
