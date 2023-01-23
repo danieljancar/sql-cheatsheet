@@ -1,46 +1,66 @@
 # Data Security
-> Datensicherheit bezieht sich auf den Schutz digitaler Informationen und Systeme vor unbefugtem Zugriff, Verwendung, Offenlegung, Störung, Veränderung oder Zerstörung. Es umfasst eine Vielzahl von Maßnahmen und Technologien, die zum Schutz sensibler und vertraulicher Informationen eingesetzt werden.
+> Data security refers to the protection of digital information and systems from unauthorized access, use, disclosure, disruption, modification, or destruction. It encompasses a wide range of measures and technologies that are used to safeguard sensitive and confidential information.
 ## AUTHENTICATION
-<<<<<<< HEAD
-Authentifizierung ist der Prozess der Überprüfung der Identität eines Benutzers. Im Kontext der Datensicherheit wird es verwendet, um sicherzustellen, dass nur autorisierte Benutzer auf bestimmte Datenbanken oder Tabellen zugreifen können. Die CREATE USER-Anweisung wird verwendet, um einen neuen Benutzer mit einem angegebenen Kennwort zu erstellen, und die GRANT-Anweisung wird verwendet, um diesem Benutzer Zugriff auf eine bestimmte Datenbank oder Tabelle zu gewähren.
-> Dieser Befehl wird verwendet, um einen neuen Benutzer mit einem bestimmten Passwort zu erstellen
-=======
 Authentication is the process of verifying the identity of a user. In the context of data security, it is used to ensure that only authorized users are able to access specific databases or tables. The CREATE USER statement is used to create a new user with a specified password, and the GRANT statement is used to grant that user access to a specific database or table.
 > This command is used to create a new user with a specified password
 > U normally need to use the master database to do something with users ```use master```
->>>>>>> c19ec8220ce5c7a5caa4056aeac7fe29da25d4b2
 ```sql
-    CREATE USER user_name IDENTIFIED BY 'password';
+    USE master;
+    CREATE LOGIN login_name
+    WITH PASSWORD = 'passwort', CHECK_POLICY = OFF;
 ```
-> Dieser Befehl wird verwendet, um einem Benutzer Zugriff auf eine bestimmte Datenbank oder Tabelle zu gewähren
+> Login for a specific user
+```sql
+    USE myDatabase;
+    CREATE USER user_name FOR LOGIN login_name;
+```
+> This command is used to grant a user access to a specific database or table
 ```sql
     GRANT SELECT, INSERT, UPDATE, DELETE ON table_name TO user_name;
 ```
 ## AUTHORIZATION
-Autorisierung ist der Prozess des Gewährens oder Widerrufens des Zugriffs auf bestimmte Ressourcen basierend auf der Rolle oder Berechtigungsebene eines Benutzers. Die REVOKE-Anweisung wird verwendet, um den Zugriff eines Benutzers auf eine bestimmte Datenbank oder Tabelle zu widerrufen.
-> Dieser Befehl wird verwendet, um den Zugriff eines Benutzers auf eine bestimmte Datenbank oder Tabelle zu widerrufen
+Authorization is the process of granting or revoking access to specific resources based on a user's role or level of privilege. The REVOKE statement is used to revoke a user's access to a specific database or table.
+> Assign a server role to the login
+```sql
+    USE master;
+    ALTER SERVER ROLE role_name ADD MEMBER login_name;
+```
+> Revoke a server role from the login
+```sql
+    ALTER SERVER ROLE role_name DROP MEMBER login_name;
+```
+> Assign a database role to the user
+```sql
+    USE mydatabase;
+    ALTER ROLE role_name ADD MEMBER user_name;
+```
+> Revoke a role from the user
+```sql
+    ALTER ROLE role_name DROP MEMBER user_name;
+```
+> This command is used to revoke a user's access to a specific database or table
 ```sql
     REVOKE SELECT, INSERT, UPDATE, DELETE ON table_name FROM user_name;
 ```
 ## ROW LEVEL SECURITY
-Sicherheit auf Zeilenebene ist eine Funktion, mit der Sie den Zugriff auf bestimmte Zeilen in einer Tabelle basierend auf der Rolle oder Berechtigungsebene eines Benutzers einschränken können. Die CREATE POLICY-Anweisung wird verwendet, um eine Richtlinie zu erstellen, die den Zugriff auf bestimmte Zeilen in einer Tabelle basierend auf der Rolle eines Benutzers einschränkt.
-> Dieser Befehl wird verwendet, um eine Richtlinie zu erstellen, die den Zugriff auf bestimmte Zeilen in einer Tabelle basierend auf der Rolle eines Benutzers einschränkt
+Row level security is a feature that allows you to restrict access to specific rows in a table based on a user's role or level of privilege. The CREATE POLICY statement is used to create a policy that restricts access to specific rows in a table based on a user's role.
+> This command is used to create a policy that restricts access to specific rows in a table based on a user's role
 ```sql
     CREATE POLICY policy_name ON table_name
     FOR SELECT
     WITH CHECK (condition)
 ```
 ## DYNAMIC DATA MASKING
-Die dynamische Datenmaskierung ist eine Funktion, mit der Sie vertrauliche Daten in einer Tabelle maskieren können. Die ALTER TABLE-Anweisung wird verwendet, um einer bestimmten Spalte in einer Tabelle eine Maskierungsfunktion hinzuzufügen.
-> Dieser Befehl wird verwendet, um sensible Daten in einer Tabelle zu maskieren
+Dynamic data masking is a feature that allows you to mask sensitive data in a table. The ALTER TABLE statement is used to add a masking function to a specific column in a table.
+> This command is used to mask sensitive data in a table
 ```sql
     ALTER TABLE table_name
     ADD MASKED WITH (FUNCTION = 'masking_function')
     FOR COLUMN sensitive_column;
 ```
 ## ENCRYPTION
-Verschlüsselung ist der Prozess der Umwandlung von Klartext in ein unlesbares Format, um ihn vor unbefugtem Zugriff zu schützen. Die ALTER TABLE-Anweisung wird verwendet, um einer bestimmten Spalte in einer Tabelle Verschlüsselung hinzuzufügen.
-> Dieser Befehl wird verwendet, um eine bestimmte Spalte in einer Tabelle zu verschlüsseln
+Encryption is the process of converting plain text into an unreadable format to protect it from unauthorized access. The ALTER TABLE statement is used to add encryption to a specific column in a table.
+> This command is used to encrypt a specific column in a table
 ```sql
     ALTER TABLE table_name
     ALTER COLUMN sensitive_column
