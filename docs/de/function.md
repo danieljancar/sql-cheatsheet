@@ -4,42 +4,42 @@
 ```sql
     CREATE TABLE table_name(
     column1 int IDENTITY(1,1),
-    --or
+    --oder
     column1 int IDENTITY,
     )
 ```
 ## SUM()
-> total
+> Summe
 ```sql
     SUM()
 ``` 
 ## MIN()
-> smallest Value
+> kleinster Wert
 ```sql
     MIN()
 ```
 ## MAX()
-> biggest Wert
+> grösster Wert
 ```sql
     MAX()
 ```
 ## COUNT()
-> Count of columns
+> Anzahl
 ```sql
     COUNT()
 ```
 ## AVG()
-> average Value
+> Durchschnitt
 ```sql
     AVG()
 ```
 ## STDEV()
-> standard deviation
+> Standartabweichung
 ```sql
     STDEV()
 ```
 ## VAR()
-> variance
+> Varianz
 ```sql
     VAR()
 ```
