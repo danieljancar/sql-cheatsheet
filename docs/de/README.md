@@ -1,4 +1,4 @@
-![SQL banner](images/sql_banner1.jpeg)
+![SQL banner](../images/sql_banner1.jpeg)
 
 # SQL Cheatsheet 📄
 
