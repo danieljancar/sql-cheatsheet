@@ -29,19 +29,19 @@ Der Befehl CREATE wird verwendet, um eine neue Tabelle mit angegebenen Spalten u
 Der Befehl ALTER wird verwendet, um Änderungen an einer vorhandenen Tabelle vorzunehmen, z. B. eine neue Spalte hinzuzufügen, eine vorhandene Spalte zu ändern oder eine Spalte zu löschen.
 > Dieser Befehl wird verwendet, um einer bestehenden Tabelle eine neue Spalte hinzuzufügen
 ```SQL
-    ALTER TABLE Tabellenname
-    Einschränkung Spaltenname Datentyp constraint;
+    ALTER TABLE table_name
+    ADD column_name data_type constraint;
 ```
 > Dieser Befehl wird verwendet, um eine vorhandene Spalte in einer Tabelle zu ändern
 ```SQL
-    ALTER TABLE Tabellenname
-    MODIFY Spaltenname Datentyp constraint;
+    ALTER TABLE table_name
+    MODIFY column_name data_type constraint;
 ```
 
 > Dieser Befehl wird verwendet, um eine Spalte aus einer bestehenden Tabelle zu löschen
 ```SQL
-    ALTER TABLE Tabellenname
-    DROP COLUMN Spaltenname;
+    ALLTER TABLE table_name
+    DROP COLUMN column_name;
 ```
 ## DROP
 Der DROP-Befehl wird verwendet, um eine bestehende Tabelle, ihre Struktur und alle ihre Daten dauerhaft aus der Datenbank zu löschen. Es kann auch verwendet werden, um andere Datenbankobjekte wie Ansichten, Indizes und Sequenzen zu löschen. Sobald eine Tabelle gelöscht wird, gehen alle darin gespeicherten Daten verloren und können nicht wiederhergestellt werden. Es ist wichtig, diesen Befehl mit Vorsicht zu verwenden, da er nicht rückgängig gemacht werden kann.
