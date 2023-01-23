@@ -5,7 +5,7 @@
     SELECT * FROM table1 WHERE alter < 18 AND plz = 5000;
 ```
 ## OR
-> logischer anderer Link
+> logischer OR-Verknüpfung
 ```SQL
     SELECT * FROM table1 WHERE alter < 18 OR alter > 65;
 ```
@@ -32,7 +32,7 @@
 ```SQL
     SELECT id, column2, column3 FROM table1 WHERE id IN (1, 2, 3);
 ```
-## MÖGEN
+## LIKE
 > LIKE ist ideal für komplexere Textabfragen. LIKE sucht nach einem Muster in einem String und wird daher auch als Mustervergleich bezeichnet. Es gibt verschiedene Platzhalter:
 ```SQL
     -- % -> Beliebig viele Zeichen
