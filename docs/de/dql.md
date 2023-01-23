@@ -14,7 +14,9 @@ Die SELECT-Anweisung wird verwendet, um Daten aus einer oder mehreren Tabellen i
 Die AS-Anweisung hat die Möglichkeit, Spalten oder Tabellen für die Abfrage umzubenennen und somit mit Ersatznamen zu versehen. Beachten Sie, dass die Aliase für die gesamte Abfrage gelten, was bedeutet, dass Sie sie dann in der gesamten Abfrage konsistent verwenden müssen.
 > Dieser Befehl wird verwendet, um Spalten einer Abfrage umzubenennen.
 ```SQL
-    SELECT Spalte1 Gesamt AS Tabelle1;
+    SELECT Spalte1 FROM Tabelle1 AS 'Gesamt';
+    -- oder
+    SELECT Spalte1 Gesamt FROM Tabelle1
 ```
 ## DISTINCT
 Die DISTINCT-Anweisung wird verwendet, um sicherzustellen, dass identische Werte nur einmal in einer Tabelle vorkommen.
@@ -132,7 +134,7 @@ Die GROUP BY-Klausel wird verwendet, um Zeilen aus einer Tabelle basierend auf e
 Die Unterabfrage ist eine Abfrage, die in einer anderen Abfrage verschachtelt ist. Es wird verwendet, um Daten aus einer Tabelle basierend auf den Ergebnissen einer anderen Tabelle abzurufen.
 > Dieser Befehl wird verwendet, um alle Spalten aus einer Tabelle auszuwählen, bei denen eine bestimmte Spalte mit einem Wert übereinstimmt, der von einer Unterabfrage zurückgegeben wird
 ```SQL
-    WÄHLEN Sie * AUS Tabelle1
+    SELECT * FROM Tabelle1
     WHERE Spalte1 = (SELECT Spalte2 AUS Tabelle2)
 ```
 ## UNION
