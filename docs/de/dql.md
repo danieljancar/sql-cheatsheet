@@ -49,7 +49,7 @@ Die WHERE-Klausel wird verwendet, um Daten basierend auf einer bestimmten Beding
 > Dieser Befehl wird verwendet, um alle Spalten einer Tabelle auszuwählen, bei denen eine bestimmte Spalte gleich einem bestimmten Wert ist.
 ```SQL
     SELECT * FROM Tabellenname
-    WO Spaltenname = Wert;
+    WHERE Spaltenname = Wert;
 ```
 ## CASE
 Die CASE-Anweisung wird verwendet, um eine Reihe von Bedingungen auszuwerten und basierend auf dem Ergebnis einen bestimmten Wert zurückzugeben.
@@ -57,10 +57,10 @@ Die CASE-Anweisung wird verwendet, um eine Reihe von Bedingungen auszuwerten und
 ```SQL
     SELECT-Spalte1,
     CASE-Spalte2
-    WENN Wert1 DANN 'neuer_Wert1'
-    WENN Wert2 DANN 'neuer_Wert2'
+    WHERE Wert1 THEN 'neuer_Wert1'
+    WHERE Wert2 THEN 'neuer_Wert2'
     ELSE 'neuer_wert3'
-    ENDE ALS neue_Spalte
+    END AS neue_Spalte
     FROM Tabellenname;
 ```
 ## INNER JOIN
@@ -119,14 +119,14 @@ Die GROUP BY-Klausel wird verwendet, um Zeilen aus einer Tabelle basierend auf e
 ```SQL
     SELECT table1 FROM-Spalte
     GROUP BY Tabelle1
-    ANZAHL HABEN(*) > 100;
+    HAVING COUNT(*) > 100;
 ```
 > HAVING wird nur verwendet, um die Aggregation zu filtern. Wenn Sie Datensätze vor dem Gruppieren filtern möchten, müssen Sie eine WHERE-Klausel entsprechend setzen. In der folgenden Abfrage fügen wir der obigen Aussage die Bedingung hinzu, dass die Personen älter als 18 Jahre sein müssen:
 ```SQL
-    SELECT count(id), table1 FROM column1
+    SELECT COUNT(id), table1 FROM column1
     WHERE ändern > 18
     GROUP BY Tabelle1
-    HAVING count(id) > 100;
+    HAVING COUNT(id) > 100;
 ```
 ## SUBQUERY
 Die Unterabfrage ist eine Abfrage, die in einer anderen Abfrage verschachtelt ist. Es wird verwendet, um Daten aus einer Tabelle basierend auf den Ergebnissen einer anderen Tabelle abzurufen.
@@ -139,27 +139,27 @@ Die Unterabfrage ist eine Abfrage, die in einer anderen Abfrage verschachtelt is
 SET-Operationen werden verwendet, um das Ergebnis von zwei oder mehr SELECT-Anweisungen zu einem einzigen Ergebnis zu kombinieren.
 > Dieser Befehl wird verwendet, um alle unterschiedlichen Werte aus zwei oder mehr Tabellen auszuwählen, die mit UNION kombiniert werden
 ```SQL
-    Spalte1 AUS Tabelle1 AUSWÄHLEN
+    SELECT column1 FROM table1
     UNION
-    Spalte1 AUS Tabelle2 AUSWÄHLEN;
+    SELECT column1 FROM table2;
 ```
 > Mit diesem Befehl werden alle Werte aus zwei oder mehr Tabellen selektiert, die mit UNION ALL kombiniert werden
 ```SQL
-    Spalte1 AUS Tabelle1 AUSWÄHLEN
-    UNION ALLE
-    Spalte1 AUS Tabelle2 AUSWÄHLEN;
+    SELECT column1 FROM table1
+    UNION ALL
+    SELECT column1 FROM table2;
 ```
 ## INTERSECT
 > Mit diesem Befehl werden alle Werte ausgewählt, die sowohl in der ersten als auch in der zweiten Tabelle enthalten sind
 ```SQL
-    Spalte1 AUS Tabelle1 AUSWÄHLEN
+    SELECT column1 FROM table1
     INTERSECT
-    Spalte1 AUS Tabelle2 AUSWÄHLEN;
+    SELECT column1 FROM table2;
 ```
 ## EXCEPT
 > Dieser Befehl wird verwendet, um alle Werte auszuwählen, die für die erste Tabelle eindeutig sind und nicht in der zweiten Tabelle enthalten sind
 ```SQL
-    Spalte1 AUS Tabelle1 AUSWÄHLEN
+    SELECT column1 FROM table1
     EXCEPT
-    Spalte1 AUS Tabelle2 AUSWÄHLEN;
+    SELECT column1 FROM table2;
 ```
