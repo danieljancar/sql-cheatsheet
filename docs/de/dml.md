@@ -5,7 +5,7 @@ Die INSERT-Anweisung wird verwendet, um neue Daten in eine Tabelle in der Datenb
 > Mit diesem Befehl werden neue Daten in eine Tabelle eingefügt
 ```SQL
     INSERT INTO Tabellenname (Spalte1, Spalte2, ...)
-    WERTE (Wert1, Wert2, ...);
+    VALUES (Wert1, Wert2, ...);
 ```
 > Dieser Befehl wird verwendet, um mehrere neue Daten in eine Tabelle einzufügen
 ```SQL
@@ -33,26 +33,26 @@ Die CASCADE-Option wird verwendet, um anzugeben, dass beim Löschen einer refere
 > Dieser Befehl wird verwendet, um anzugeben, dass beim Aktualisieren einer referenzierten Zeile in einer übergeordneten Tabelle alle entsprechenden Zeilen in einer untergeordneten Tabelle ebenfalls aktualisiert werden
 ```SQL
     ALTER TABLE aTable WITH CHECK ADD CONSTRAINT FK_a_table FOREIGN KEY
-    (fk_id) REFERENZEN bTable(id) ON UPDATE CASCADE;
+    (fk_id) REFERENCES bTable(id) ON UPDATE CASCADE;
 ```
 > Dieser Befehl wird verwendet, um anzugeben, dass beim Löschen einer referenzierten Zeile in einer übergeordneten Tabelle alle entsprechenden Zeilen in einer untergeordneten Tabelle ebenfalls gelöscht werden
 ```SQL
     ALTER TABLE aTable WITH CHECK ADD CONSTRAINT FK_a_table FOREIGN KEY
-    (fk_id) REFERENZEN bTable(id) ON DELETE CASCADE;
+    (fk_id) REFERENCES bTable(id) ON DELETE CASCADE;
 ```
 > Sie können sie auch kombinieren
 ```SQL
     ALTER TABLE aTable WITH CHECK ADD CONSTRAINT FK_a_table FOREIGN KEY
-    (fk_id) REFERENZEN bTable(id) ON UPDATE CASCADE ON DELETE CASCADE;
+    (fk_id) REFERENCES bTable(id) ON UPDATE CASCADE ON DELETE CASCADE;
 ```
 ## MERGE
 Die MERGE-Anweisung wird verwendet, um Daten basierend auf einer Bedingung entweder zu aktualisieren oder in eine Tabelle einzufügen. Es ermöglicht dem Benutzer, eine Quelltabelle, die Bedingungen für das Aktualisieren und Einfügen sowie die zu verwendenden Spalten und Werte anzugeben.
 > Dieser Befehl wird verwendet, um Daten basierend auf einer Bedingung entweder zu aktualisieren oder in eine Tabelle einzufügen
 ```SQL
-    MERGE INTO Tabellenname
-    USING (SELECT Spalte1, Spalte2, ... FROM source_table) Quelle
-    EIN (Tabellenname.id = Quelle.id)
-    BEI ÜBEREINSTIMMUNG DANN UPDATE SET Spalte1 = Quelle.Spalte1, ...
-    WENN NICHT ÜBEREINSTIMMT, DANN EINFÜGEN (Spalte1, Spalte2, ...)
-    WERTE (Quelle.Spalte1, Quelle.Spalte2, ...);
+    MERGE INTO table_name
+    USING (SELECT column1, column2, ... FROM source_table) source
+    ON (table_name.id = source.id)
+    WHEN MATCHED THEN UPDATE SET column1 = source.column1, ...
+    WHEN NOT MATCHED THEN INSERT (column1, column2, ...)
+    VALUES (source.column1, source.column2, ...);
 ```

@@ -21,8 +21,8 @@ Der Befehl CREATE wird verwendet, um eine neue Tabelle mit angegebenen Spalten u
 > Dieser Befehl wird verwendet, um eine neue Tabelle mit bestimmten Spalten und Datentypen zu erstellen
 ```SQL
     CREATE TABLE Tabellenname (
-    Spalte1 Datentyp Einschränkung,
-    Spalte2 Datentyp Einschränkung,
+    Spalte1 Datentyp constraint,
+    Spalte2 Datentyp constraint,
     );
 ```
 ## ALTER
@@ -35,7 +35,7 @@ Der Befehl ALTER wird verwendet, um Änderungen an einer vorhandenen Tabelle vor
 > Dieser Befehl wird verwendet, um eine vorhandene Spalte in einer Tabelle zu ändern
 ```SQL
     ALTER TABLE Tabellenname
-    MODIFY Spaltenname Datentyp Einschränkung;
+    MODIFY Spaltenname Datentyp constraint;
 ```
 
 > Dieser Befehl wird verwendet, um eine Spalte aus einer bestehenden Tabelle zu löschen
