@@ -1,4 +1,4 @@
-## Installing SQL, RDBMS, and DBs on macOS 🍎
+# Installing SQL, RDBMS, and DBs on macOS 🍎
 
 SQL, or Structured Query Language, is a programming language used for managing and manipulating relational databases. In order to use SQL on a macOS machine, you will need to install a relational database management system (RDBMS) such as MySQL, Oracle, or Microsoft SQL Server.
 

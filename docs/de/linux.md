@@ -1,4 +1,4 @@
-## Installing SQL, RDBMS, and DBs on Linux 🐧
+# Installing SQL, RDBMS, and DBs on Linux 🐧
 
 SQL, or Structured Query Language, is a programming language used for managing and manipulating relational databases. In order to use SQL on a Linux machine, you will need to install a relational database management system (RDBMS) such as MySQL, Oracle, or PostgreSQL.
 
