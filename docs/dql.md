@@ -113,7 +113,7 @@ CROSS JOIN is to use to generate a lot of data.
 ```
 ## GROUP BY
 The GROUP BY clause is used to group rows from a table based on one or more columns.
-> This command is used to select a column and the count of its dist inct values, grouped by another column
+> This command is used to select a column and the count of its distinct values, grouped by another column
 ```sql
     SELECT column1, COUNT(DISTINCT column2)
     FROM table_name
