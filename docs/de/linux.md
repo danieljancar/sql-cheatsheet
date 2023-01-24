@@ -1,32 +1,31 @@
-# Installing SQL, RDBMS, and DBs on Linux 🐧
+# Installation von SQL, RDBMS und DBs unter Linux 🐧
 
-SQL, or Structured Query Language, is a programming language used for managing and manipulating relational databases. In order to use SQL on a Linux machine, you will need to install a relational database management system (RDBMS) such as MySQL, Oracle, or PostgreSQL.
+SQL oder Structured Query Language ist eine Programmiersprache zur Verwaltung und Bearbeitung relationaler Datenbanken. Um SQL auf einem Linux-Computer zu verwenden, müssen Sie ein relationales Datenbankverwaltungssystem (RDBMS) wie MySQL, Oracle oder PostgreSQL installieren.
 
-Here are some steps to help you get started with installing SQL and a RDBMS on a Linux machine:
+Hier sind einige Schritte, die Ihnen beim Einstieg in die Installation von SQL und einem RDBMS auf einem Linux-Rechner helfen sollen:
 
-1. Use your package manager to install a RDBMS of your choice, such as MySQL, Oracle or PostgreSQL. For example, on Ubuntu you can use the following command to install MySQL: `sudo apt-get install mysql-server`
-2. Download and install a SQL client, such as [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) or [pgAdmin](https://www.pgadmin.org/download/linux/).
-3. Once the installation is complete, you can start the SQL client and connect to your RDBMS.
-4. You can also use additional tools such as [phpMyAdmin](https://www.phpmyadmin.net/) for web-based management of MySQL and MariaDB databases.
+1. Verwenden Sie Ihren Paketmanager, um ein RDBMS Ihrer Wahl zu installieren, z. B. MySQL, Oracle oder PostgreSQL. Unter Ubuntu können Sie beispielsweise den folgenden Befehl verwenden, um MySQL zu installieren: `sudo apt-get install mysql-server`
+2. Laden Sie einen SQL-Client herunter und installieren Sie ihn, z. B. [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) oder [pgAdmin](https://www.pgadmin.org/download/linux/ ).
+3. Sobald die Installation abgeschlossen ist, können Sie den SQL-Client starten und sich mit Ihrem RDBMS verbinden.
+4. Sie können auch zusätzliche Tools wie [phpMyAdmin](https://www.phpmyadmin.net/) für die webbasierte Verwaltung von MySQL- und MariaDB-Datenbanken verwenden.
 
-## Using Docker for SQL and RDBMS on Linux 🐳
-Docker is a popular tool for containerizing applications and services. It can also be used to run a SQL server and RDBMS on a Linux machine. Here are some steps to help you get started with using Docker for SQL and RDBMS on a Linux machine:
+## Verwenden von Docker für SQL und RDBMS unter Linux 🐳
+Docker ist ein beliebtes Tool zum Containerisieren von Anwendungen und Diensten. Es kann auch verwendet werden, um einen SQL-Server und RDBMS auf einem Linux-Rechner auszuführen. Hier sind einige Schritte, die Ihnen den Einstieg in die Verwendung von Docker für SQL und RDBMS auf einem Linux-Computer erleichtern:
 
-1. Install [Docker](https://docs.docker.com/engine/install/) on your Linux machine
-2. Search for and download a SQL server and RDBMS Docker image, such as [MySQL](https://hub.docker.com/_/mysql), [Oracle](https://hub.docker.com/_/oracle-database-enterprise-edition) or [PostgreSQL](https://hub.docker.com/_/postgres).
-3. Start the Docker image and connect to it using a SQL client or web-based management tool.
-4. You can also use tools such as [phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/) for web-based management of your databases.
+1. Installieren Sie [Docker](https://docs.docker.com/engine/install/) auf Ihrem Linux-Rechner
+2. Suchen Sie nach einem SQL Server- und RDBMS-Docker-Image und laden Sie es herunter, z. B. [MySQL](https://hub.docker.com/_/mysql), [Oracle](https://hub.docker.com/_ /oracle-database-enterprise-edition) oder [PostgreSQL](https://hub.docker.com/_/postgres).
+3. Starten Sie das Docker-Image und stellen Sie mit einem SQL-Client oder einem webbasierten Verwaltungstool eine Verbindung damit her.
+4. Sie können auch Tools wie [phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/) für die webbasierte Verwaltung Ihrer Datenbanken verwenden.
 
-It is important to note that the installation process may vary depending on the distribution of Linux you are using and the specific RDBMS you have chosen. Be sure to refer to the official documentation for the specific RDBMS and version you are installing for the most up-to-date instructions.
+Es ist wichtig zu beachten, dass der Installationsprozess je nach der von Ihnen verwendeten Linux-Distribution und dem von Ihnen ausgewählten spezifischen RDBMS variieren kann. Die aktuellsten Anweisungen finden Sie in der offiziellen Dokumentation für das spezifische RDBMS und die Version, die Sie installieren.
 
-## Different DBs for Linux 🐧
-There are many different RDBMS and DBs available for Linux, such as MySQL, Oracle, PostgreSQL, SQLite, and MariaDB. Each one has its own strengths and weaknesses, and the right choice for you will depend on your specific needs and use case.
+## Verschiedene DBs für Linux 🐧
+Es gibt viele verschiedene RDBMS und DBs für Linux, wie MySQL, Oracle, PostgreSQL, SQLite und MariaDB. Jedes hat seine eigenen Stärken und Schwächen, und die richtige Wahl für Sie hängt von Ihren spezifischen Bedürfnissen und Ihrem Anwendungsfall ab.
+- [MySQL](https://www.mysql.com/) ist ein beliebtes Open-Source-RDBMS, das in Webanwendungen und kleinen bis mittleren Unternehmen weit verbreitet ist.
+- [Oracle](https://www.oracle.com/database/) ist ein leistungsstarkes RDBMS auf Unternehmensebene, das in großen Organisationen und geschäftskritischen Anwendungen weit verbreitet ist.
+- [PostgreSQL](https://www.postgresql.org/) ist ein leistungsstarkes Open-Source-RDBMS, das für seine Skalierbarkeit und Erweiterbarkeit bekannt ist.
+- [SQLite](https://www.sqlite.org/) ist ein leichtgewichtiges, dateibasiertes RDBMS, das häufig in eingebetteten Systemen und mobilen Anwendungen verwendet wird.
+- [MariaDB](https://mariadb.org/) ist ein Fork von MySQL und wird oft als erweiterte Open-Source-Version von MySQL betrachtet.
 
-- [MySQL](https://www.mysql.com/) is a popular, open-source RDBMS that is widely used in web applications and small to medium-sized businesses.
-- [Oracle](https://www.oracle.com/database/) is a powerful, enterprise-level RDBMS that is widely used in large organizations and mission-critical applications.
-- [PostgreSQL](https://www.postgresql.org/) is a powerful, open-source RDBMS that is known for its scalability and extensibility.
-- [SQLite](https://www.sqlite.org/) is a lightweight, file-based RDBMS that is often used in embedded systems and mobile applications.
-- [MariaDB](https://mariadb.org/) is a fork of MySQL and is often considered as an enhanced, open-source version of MySQL.
-
-You can download and install any of these DBs as per your need and suitability. <br>
-**Happy coding! 🚀**
+Sie können jede dieser DBs je nach Bedarf und Eignung herunterladen und installieren. <br>
+** Viel Spaß beim Programmieren! 🚀**

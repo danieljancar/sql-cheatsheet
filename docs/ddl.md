@@ -25,6 +25,22 @@ The CREATE command is used to create a new table with specified columns and data
     column2 data_type constraint,
     );
 ```
+> Create a Table with a Schema
+```SQL
+    CREATE TABLE [schema.]tabelle(
+    spalte1 datentyp [ NULL | NOT NULL ],
+    spalte2 datentyp [ NULL | NOT NULL ],
+    spalte3 datentyp [ NULL | NOT NULL ],
+   ....
+);
+```
+## Schema
+> Creating a Schema in a Database
+```SQL
+    USE m106;
+    GO
+    CREATE SCHEMA schema106;
+```
 ## ALTER
 The ALTER command is used to make changes to an existing table, such as adding a new column, modifying an existing column, or deleting a column.
 > This command is used to add a new column to an existing table

@@ -45,7 +45,6 @@ The CASCADE option is used to specify that when a referenced row in a parent tab
     ALTER TABLE aTable WITH CHECK ADD CONSTRAINT FK_a_table FOREIGN KEY
     (fk_id) REFERENCES bTable(id) ON UPDATE CASCADE ON DELETE CASCADE;
 ```
-
 ## MERGE
 The MERGE statement is used to either update or insert data into a table based on a condition. It allows the user to specify a source table, the conditions for updating and inserting and the columns and values to be used.
 > This command is used to either update or insert data into a table based on a condition

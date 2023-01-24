@@ -1,8 +1,8 @@
-# Views
-> A view in a relational database is a virtual table that is based on the result of a SELECT statement. It does not store data itself, but rather it provides a way to access data from one or more tables in a specific way. Views can be used to simplify complex queries, to restrict access to certain columns of a table, or to present data in a specific format.
+# Aufrufe
+> Eine Ansicht in einer relationalen Datenbank ist eine virtuelle Tabelle, die auf dem Ergebnis einer SELECT-Anweisung basiert. Es speichert selbst keine Daten, sondern bietet eine Möglichkeit, auf bestimmte Weise auf Daten aus einer oder mehreren Tabellen zuzugreifen. Ansichten können verwendet werden, um komplexe Abfragen zu vereinfachen, den Zugriff auf bestimmte Spalten einer Tabelle einzuschränken oder Daten in einem bestimmten Format darzustellen.
 ## CREATE VIEW
-The CREATE VIEW statement is used to create a new virtual table based on the result of a SELECT statement. It allows the user to specify the name of the view and the SELECT statement that defines the view.
-> This command is used to create a virtual table based on the result of a SELECT statement
+Die CREATE VIEW-Anweisung wird verwendet, um eine neue virtuelle Tabelle basierend auf dem Ergebnis einer SELECT-Anweisung zu erstellen. Es ermöglicht dem Benutzer, den Namen der Ansicht und die SELECT-Anweisung anzugeben, die die Ansicht definiert.
+> Dieser Befehl wird verwendet, um eine virtuelle Tabelle basierend auf dem Ergebnis einer SELECT-Anweisung zu erstellen
 ```sql
     CREATE VIEW view_name AS
     SELECT column1, column2, ...
@@ -10,15 +10,15 @@ The CREATE VIEW statement is used to create a new virtual table based on the res
     WHERE condition;
 ```
 ## QUERY VIEW
-The SELECT VIEW statement is used to query data from a view. It allows the user to specify the columns to retrieve and any conditions to filter the data.
-> This command is used to query data from a view
+Die Anweisung SELECT VIEW wird verwendet, um Daten aus einer Ansicht abzufragen. Es ermöglicht dem Benutzer, die abzurufenden Spalten und alle Bedingungen zum Filtern der Daten anzugeben.
+> Mit diesem Befehl werden Daten aus einer Ansicht abgefragt
 ```sql
     SELECT column1, column2, ...
     FROM view_name;
 ```
 ## EDIT VIEW / REPLACE VIEW
-The CREATE OR REPLACE VIEW statement is used to modify the SELECT statement of an existing view. It allows the user to edit the SELECT statement that defines the view and update it without having to delete and recreate the view.
-> This command is used to modify the SELECT statement of a view
+Die CREATE OR REPLACE VIEW-Anweisung wird verwendet, um die SELECT-Anweisung einer vorhandenen Ansicht zu ändern. Es ermöglicht dem Benutzer, die SELECT-Anweisung, die die Ansicht definiert, zu bearbeiten und zu aktualisieren, ohne die Ansicht löschen und neu erstellen zu müssen.
+> Dieser Befehl wird verwendet, um die SELECT-Anweisung einer Ansicht zu ändern
 ```sql
     CREATE OR REPLACE VIEW view_name AS
     SELECT column1, column2, ...
@@ -26,8 +26,8 @@ The CREATE OR REPLACE VIEW statement is used to modify the SELECT statement of a
     WHERE condition;
 ```
 ## DROP VIEW
-The DROP VIEW statement is used to delete a view. It allows the user to remove a virtual table from the database.
-> This command is used to delete a view
-```sql
+Die DROP VIEW-Anweisung wird verwendet, um eine Ansicht zu löschen. Es ermöglicht dem Benutzer, eine virtuelle Tabelle aus der Datenbank zu entfernen.
+> Dieser Befehl dient zum Löschen einer Ansicht
+```SQL
     DROP VIEW view_name;
 ```

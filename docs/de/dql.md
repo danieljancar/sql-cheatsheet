@@ -1,167 +1,166 @@
-# Data Query Language
-> Data Query Language (DQL) is used to retrieve data from a relational database. DQL statements are used to select and retrieve data from one or more tables within a database. Examples of DQL statements include SELECT, GET and READ. These statements allow users to query the database for specific information and retrieve the data in a structured format. DQL statements are typically used by end-users to access and retrieve data from the database and are not used to make changes to the database structure or data. DQL statements are executed by the database management system (DBMS) and the results are returned to the user in the form of a table or other structured format.
+# Datenabfragesprache
+> Data Query Language (DQL) wird verwendet, um Daten aus einer relationalen Datenbank abzurufen. DQL-Anweisungen werden verwendet, um Daten aus einer oder mehreren Tabellen innerhalb einer Datenbank auszuwählen und abzurufen. Beispiele für DQL-Anweisungen sind SELECT, GET und READ. Diese Anweisungen ermöglichen es Benutzern, die Datenbank nach bestimmten Informationen abzufragen und die Daten in einem strukturierten Format abzurufen. DQL-Anweisungen werden normalerweise von Endbenutzern verwendet, um auf Daten aus der Datenbank zuzugreifen und sie abzurufen, und werden nicht verwendet, um Änderungen an der Datenbankstruktur oder den Daten vorzunehmen. DQL-Anweisungen werden vom Datenbankverwaltungssystem (DBMS) ausgeführt und die Ergebnisse werden dem Benutzer in Form einer Tabelle oder eines anderen strukturierten Formats zurückgegeben.
 ## SELECT
-The SELECT statement is used to query data from one or more tables in a database.
-> This command is used to select all columns from a table
-```sql
-    SELECT * FROM table_name;
+Die SELECT-Anweisung wird verwendet, um Daten aus einer oder mehreren Tabellen in einer Datenbank abzufragen.
+> Mit diesem Befehl selektieren Sie alle Spalten einer Tabelle
+```SQL
+    SELECT * FROM Tabellenname;
 ```
-> This command is used to select specific columns from a table
-```sql
-    SELECT column1, column2, ... FROM table_name;
+> Dieser Befehl wird verwendet, um bestimmte Spalten aus einer Tabelle auszuwählen
+```SQL
+    SELECT Spalte1, Spalte2, ... FROM Tabellenname;
 ```
-## AS 
-The AS statement has the possibility to rename columns or tables for the query and thus to provide them with substitute names. Note that the aliases apply to the entire query, which means that you then have to use them consistently throughout the query.
-> This command is used to rename columns of a query.
-```sql
-    SELECT column1 Total FROM table1;
+## AS
+Die AS-Anweisung hat die Möglichkeit, Spalten oder Tabellen für die Abfrage umzubenennen und somit mit Ersatznamen zu versehen. Beachten Sie, dass die Aliase für die gesamte Abfrage gelten, was bedeutet, dass Sie sie dann in der gesamten Abfrage konsistent verwenden müssen.
+> Dieser Befehl wird verwendet, um Spalten einer Abfrage umzubenennen.
+```SQL
+    SELECT Spalte1 FROM Tabelle1 AS 'Gesamt';
+    -- oder
+    SELECT Spalte1 Gesamt FROM Tabelle1
 ```
-## DISTINCT 
-The DISTINCT statement is used to ensure that identical values ​​appear only once in a table.
-> This command is used to show values just once.
-```sql
+## DISTINCT
+Die DISTINCT-Anweisung wird verwendet, um sicherzustellen, dass identische Werte nur einmal in einer Tabelle vorkommen.
+> Dieser Befehl wird verwendet, um Werte nur einmal anzuzeigen.
+```SQL
     SELECT DISTINCT table_name FROM column_name;
 ```
-## ORDER BY 
-The ORDER BY statement is used to sort data types, for example, all numeric data types or date values. Text fields can also be sorted.
-> This command is used to sort data values of a specific table.
-```sql
-    SELECT column_name1, column_name2 FROM table_name ORDER BY column_name2;
+## ORDER BY
+Die Anweisung ORDER BY dient zum Sortieren von Datentypen, z. B. alle numerischen Datentypen oder Datumswerte. Textfelder können auch sortiert werden.
+> Dieser Befehl wird verwendet, um Datenwerte einer bestimmten Tabelle zu sortieren.
+```SQL
+    SELECT Spaltenname1, Spaltenname2 FROM Tabellenname ORDER BY Spaltenname2;
 ```
-> This command is used to sort multiple data values of a specific table.
-```sql
-    SELECT column_name1, column_name2 FROM table_name ORDER BY column_name1, column_name2;
+> Dieser Befehl wird verwendet, um mehrere Datenwerte einer bestimmten Tabelle zu sortieren.
+```SQL
+    SELECT Spaltenname1, Spaltenname2 FROM Tabellenname ORDER BY Spaltenname1, Spaltenname2;
 ```
-## TOP 
-The TOP statement is used to only show a specific amount of values in a table.
-> This command is used to only show 10 value in a table and sort them.
-```sql
-    SELECT TOP 10 column_name AS 'newtable_name' FROM table_name ORDER BY column_name DESC
+## TOP
+Die TOP-Anweisung wird verwendet, um nur eine bestimmte Anzahl von Werten in einer Tabelle anzuzeigen.
+> Dieser Befehl wird verwendet, um nur 10 Werte in einer Tabelle anzuzeigen und sie zu sortieren.
+```SQL
+    SELECT TOP 10 spaltenname AS 'neuertabellenname' FROM tabellenname ORDER BY spaltenname DESC
 ```
-## CONCAT 
-The CONCAT statement is used to combine multiple data tables in a database.
-> This command is used to combine all columns from a table into one data.
-```sql
-    SELECT column1, CONCAT(column2, column3) AS newtable_name FROM table_name;
+## CONCAT
+Die CONCAT-Anweisung wird verwendet, um mehrere Datentabellen in einer Datenbank zu kombinieren.
+> Dieser Befehl wird verwendet, um alle Spalten einer Tabelle zu einem Datum zusammenzufassen.
+```SQL
+    SELECT Spalte1, CONCAT (Spalte2, Spalte3) AS newtable_name FROM table_name;
 ```
 ## WHERE
-The WHERE clause is used to filter data based on a specific condition.
-> This command is used to select all columns from a table where a specific column is equal to a certain value.
-```sql
-    SELECT * FROM table_name
-    WHERE column_name = value;
+Die WHERE-Klausel wird verwendet, um Daten basierend auf einer bestimmten Bedingung zu filtern.
+> Dieser Befehl wird verwendet, um alle Spalten einer Tabelle auszuwählen, bei denen eine bestimmte Spalte gleich einem bestimmten Wert ist.
+```SQL
+    SELECT * FROM Tabellenname
+    WHERE Spaltenname = Wert;
 ```
 ## CASE
-The CASE statement is used to evaluate a set of conditions and return a specific value based on the result.
-> This command is used to select a column and assign a new column based on the value of another column
-```sql
-    SELECT column1,
-    CASE column2
-    WHEN value1 THEN 'new_value1'
-    WHEN value2 THEN 'new_value2'
-    ELSE 'new_value3'
-    END AS new_column
-    FROM table_name;
+Die CASE-Anweisung wird verwendet, um eine Reihe von Bedingungen auszuwerten und basierend auf dem Ergebnis einen bestimmten Wert zurückzugeben.
+> Dieser Befehl wird verwendet, um eine Spalte auszuwählen und basierend auf dem Wert einer anderen Spalte eine neue Spalte zuzuweisen
+```SQL
+    SELECT-Spalte1,
+    CASE-Spalte2
+    WHERE Wert1 THEN 'neuer_Wert1'
+    WHERE Wert2 THEN 'neuer_Wert2'
+    ELSE 'neuer_wert3'
+    END AS neue_Spalte
+    FROM Tabellenname;
 ```
 ## INNER JOIN
-You can use an INNER JOIN operation in any FROM clause. This is the most common type of join. Inner joins combine records from two tables whenever there are matching values in a field common to both tables. You can use INNER JOIN with the Departments and Employees tables to select all the employees in each department. The ON state is used to compare the FOREIGN KEYS.
-> With the INNER JOIN you can display two tables with each other.
-```sql
+Sie können eine INNER JOIN-Operation in jeder FROM-Klausel verwenden. Dies ist die häufigste Art der Verknüpfung. Inner Joins kombinieren Datensätze aus zwei Tabellen, wenn übereinstimmende Werte in einem Feld vorhanden sind, das beiden Tabellen gemeinsam ist. Sie können INNER JOIN mit den Tabellen „Departments“ und „Employees“ verwenden, um alle Mitarbeiter in jeder Abteilung auszuwählen. Der EIN-Zustand wird verwendet, um die FOREIGN KEYS zu vergleichen.
+> Mit dem INNER JOIN können Sie zwei Tabellen miteinander darstellen.
+```SQL
     SELECT atable.column1, btable.column1, atable.column2, btable.column2
     FROM atable INNER JOIN btable ON atable.column2 = btable.column2;
 ```
-## LEFT JOIN
-The LEFT JOIN in SQL basically returns all records from the left table and the matched records from the right tables. For example, let's say, we have two tables, Table A and Table B. When LEFT JOIN is applied on these two tables, all records from Table A and only the matched records from Table B will be displayed. The ON state is used to compare the FOREIGN KEYS.
-> With the LEFT JOIN you can display two tables with each other.
-```sql
+## LEFT  JOIN
+Der LEFT JOIN in SQL gibt grundsätzlich alle Datensätze aus der linken Tabelle und die übereinstimmenden Datensätze aus den rechten Tabellen zurück. Angenommen, wir haben zwei Tabellen, Tabelle A und Tabelle B. Wenn LEFT JOIN auf diese beiden Tabellen angewendet wird, werden alle Datensätze aus Tabelle A und nur die übereinstimmenden Datensätze aus Tabelle B angezeigt. Der EIN-Zustand wird verwendet, um die FOREIGN KEYS zu vergleichen.
+> Mit dem LEFT JOIN können Sie zwei Tabellen miteinander darstellen.
+```SQL
     SELECT atable.column1, btable.column1, atable.column2, btable.column2
     FROM atable LEFT JOIN btable ON atable.column2 = btable.column2;
 ```
-
 ## RIGHT JOIN
-The RIGHT JOIN in SQL basically returns all records from the right table and the matched records from the right tables. For example, let's say, we have two tables, Table B and Table B. When RIGHT JOIN is applied on these two tables, all records from Table A and only the matched records from Table A will be displayed. The ON state is used to compare the FOREIGN KEYS.
-> With the RIGHT JOIN you can display two tables with each other.
-```sql
+Der RIGHT JOIN in SQL gibt grundsätzlich alle Datensätze aus der richtigen Tabelle und die übereinstimmenden Datensätze aus den richtigen Tabellen zurück. Angenommen, wir haben zwei Tabellen, Tabelle B und Tabelle B. Wenn RIGHT JOIN auf diese beiden Tabellen angewendet wird, werden alle Datensätze aus Tabelle A und nur die übereinstimmenden Datensätze aus Tabelle A angezeigt. Der EIN-Zustand wird verwendet, um die FOREIGN KEYS zu vergleichen.
+> Mit dem RIGHT JOIN können Sie zwei Tabellen miteinander darstellen.
+```SQL
     SELECT atable.column1, btable.column1, atable.column2, btable.column2
     FROM atable RIGHT JOIN btable ON atable.column2 = btable.column2;
 ```
 ## FULL JOIN
-The FULL JOIN is the RIGHT JOIN and the LEFT JOIN mixed so all records are show.
-> With the FULL JOIN you can display two tables with each other.
-```sql
+Der FULL JOIN ist der RIGHT JOIN und der LEFT JOIN gemischt, sodass alle Datensätze angezeigt werden.
+> Mit dem FULL JOIN können Sie zwei Tabellen miteinander darstellen.
+```SQL
     SELECT atable.column1, btable.column1, atable.column2, btable.column2
     FROM atable FULL JOIN btable ON atable.column2 = btable.column2;
 ```
-
 ## SELF JOIN
-A self-join is a join that can be used to join a table with itself. Hence, it is a unary relation. In a self-join, each row of the table is joined with itself and all the other rows of the same table. Thus, a self-join is mainly used to combine and compare the rows of the same table in the database.
-> With the SELF JOIN you can display two tables with each other.
-```sql
-    SELECT atable.column1, atable.column2, atable.column3,  btable.column1 AS 'table1_name' AS 'table2_name'
+Ein Self-Join ist ein Join, der verwendet werden kann, um eine Tabelle mit sich selbst zu verknüpfen. Es handelt sich also um eine unäre Relation. Bei einem Self-Join wird jede Zeile der Tabelle mit sich selbst und allen anderen Zeilen derselben Tabelle verknüpft. Daher wird ein Self-Join hauptsächlich verwendet, um die Zeilen derselben Tabelle in der Datenbank zu kombinieren und zu vergleichen.
+> Mit dem SELF JOIN können Sie zwei Tabellen miteinander darstellen.
+```SQL
+    SELECT atable.column1, atable.column2, atable.column3, btable.column1 AS 'table1_name' AS 'table2_name'
     FROM table1 JOIN table2 ON atable.column1 = btable.column1;
 ```
-
 ## CROSS JOIN
-CROSS JOIN is to use to generate a lot of data.
-> With the CROSS JOIN you can display two tables with each other and all data are mixed.
-```sql
+CROSS JOIN ist zu verwenden, um viele Daten zu generieren.
+> Mit dem CROSS JOIN können Sie zwei Tabellen miteinander darstellen und alle Daten werden gemischt.
+```SQL
     SELECT * FROM btable CROSS JOIN atable;
-    -- or
-    SELECT column1, column2, column3 FROM btable, atable;
+    -- oder
+    SELECT Spalte1, Spalte2, Spalte3 FROM btable, atable;
 ```
 ## GROUP BY
-The GROUP BY clause is used to group rows from a table based on one or more columns.
-> This command is used to select a column and the count of its dist inct values, grouped by another column
-```sql
-    SELECT column1, COUNT(DISTINCT column2)
-    FROM table_name
-    GROUP BY column1;
+Die GROUP BY-Klausel wird verwendet, um Zeilen aus einer Tabelle basierend auf einer oder mehreren Spalten zu gruppieren.
+> Dieser Befehl wird verwendet, um eine Spalte und die Anzahl ihrer distinkten Werte, gruppiert nach einer anderen Spalte, auszuwählen
+```SQL
+    SELECT Spalte1, COUNT(DISTINCT Spalte2)
+    FROM Tabellenname
+    GROUP BY Spalte1;
 ```
 ## HAVING
-> The HAVING keyword can only be used in combination with GROUP BY and is used to restrict or filter the results of aggregate functions.
-```sql
-    SELECT table1 FROM column 
-    GROUP BY table1
+> Das Schlüsselwort HAVING kann nur in Kombination mit GROUP BY verwendet werden und dient dazu, die Ergebnisse von Aggregatfunktionen einzuschränken oder zu filtern.
+```SQL
+    SELECT table1 FROM-Spalte
+    GROUP BY Tabelle1
     HAVING COUNT(*) > 100;
 ```
-> HAVING is only used to filter the aggregation. If you want to filter records before grouping, you have to set a WHERE clause accordingly. In the following query, we add the condition that the persons must be older than 18 to the above statement:
-```sql
-    SELECT count(id), table1 FROM column1 
-    WHERE alter > 18
-    GROUP BY table1 
-    HAVING count(id) > 100;
+> HAVING wird nur verwendet, um die Aggregation zu filtern. Wenn Sie Datensätze vor dem Gruppieren filtern möchten, müssen Sie eine WHERE-Klausel entsprechend setzen. In der folgenden Abfrage fügen wir der obigen Aussage die Bedingung hinzu, dass die Personen älter als 18 Jahre sein müssen:
+```SQL
+    SELECT COUNT(id), table1 FROM column1
+    WHERE ändern > 18
+    GROUP BY Tabelle1
+    HAVING COUNT(id) > 100;
 ```
-## SUBQUERIES
-The subquery is a query nested within another query. It is used to retrieve data from one table based on the results of another table.
-> This command is used to select all columns from a table where a specific column matches a value returned by a subquery
-```sql
-    SELECT * FROM table1
-    WHERE column1 = (SELECT column2 FROM table2)
+## SUBQUERY
+Die Unterabfrage ist eine Abfrage, die in einer anderen Abfrage verschachtelt ist. Es wird verwendet, um Daten aus einer Tabelle basierend auf den Ergebnissen einer anderen Tabelle abzurufen.
+> Dieser Befehl wird verwendet, um alle Spalten aus einer Tabelle auszuwählen, bei denen eine bestimmte Spalte mit einem Wert übereinstimmt, der von einer Unterabfrage zurückgegeben wird
+```SQL
+    SELECT * FROM Tabelle1
+    WHERE Spalte1 = (SELECT Spalte2 AUS Tabelle2)
 ```
 ## UNION
-SET operations are used to combine the result of two or more SELECT statements into a single result.
-> This command is used to select all distinct values from two or more tables that are combined using UNION
-```sql
+SET-Operationen werden verwendet, um das Ergebnis von zwei oder mehr SELECT-Anweisungen zu einem einzigen Ergebnis zu kombinieren.
+> Dieser Befehl wird verwendet, um alle unterschiedlichen Werte aus zwei oder mehr Tabellen auszuwählen, die mit UNION kombiniert werden
+```SQL
     SELECT column1 FROM table1
     UNION
     SELECT column1 FROM table2;
 ```
-> This command is used to select all values from two or more tables that are combined using UNION ALL
-```sql
+> Mit diesem Befehl werden alle Werte aus zwei oder mehr Tabellen selektiert, die mit UNION ALL kombiniert werden
+```SQL
     SELECT column1 FROM table1
     UNION ALL
     SELECT column1 FROM table2;
 ```
 ## INTERSECT
-> This command is used to select all values that are in both the first and second table
-```sql
+> Mit diesem Befehl werden alle Werte ausgewählt, die sowohl in der ersten als auch in der zweiten Tabelle enthalten sind
+```SQL
     SELECT column1 FROM table1
     INTERSECT
     SELECT column1 FROM table2;
 ```
 ## EXCEPT
-> This command is used to select all values that are unique to the first table and are not in the second table
-```sql
+> Dieser Befehl wird verwendet, um alle Werte auszuwählen, die für die erste Tabelle eindeutig sind und nicht in der zweiten Tabelle enthalten sind
+```SQL
     SELECT column1 FROM table1
     EXCEPT
     SELECT column1 FROM table2;

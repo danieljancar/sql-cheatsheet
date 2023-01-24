@@ -14,6 +14,8 @@ The SELECT statement is used to query data from one or more tables in a database
 The AS statement has the possibility to rename columns or tables for the query and thus to provide them with substitute names. Note that the aliases apply to the entire query, which means that you then have to use them consistently throughout the query.
 > This command is used to rename columns of a query.
 ```sql
+    SELECT column1 FROM table1 AS 'Total';
+    -- or
     SELECT column1 Total FROM table1;
 ```
 ## DISTINCT 

@@ -1,22 +1,22 @@
-# The History of SQL 📜
+# Die Geschichte von SQL 📜
 
-SQL, or Structured Query Language, is a programming language that has been widely used for managing and manipulating relational databases since the 1970s. 
+SQL oder Structured Query Language ist eine Programmiersprache, die seit den 1970er Jahren für die Verwaltung und Bearbeitung relationaler Datenbanken weit verbreitet ist.
 
-The development of SQL can be traced back to IBM's [System R project](https://en.wikipedia.org/wiki/System_R), which aimed to create a relational database management system. In the early 1970s, IBM researcher Donald D. Chamberlin and Raymond F. Boyce developed a language called SEQUEL (Structured English Query Language), which was later renamed to SQL. 
+Die Entwicklung von SQL lässt sich auf das [System R-Projekt] von IBM (https://en.wikipedia.org/wiki/System_R) zurückführen, das darauf abzielte, ein relationales Datenbankverwaltungssystem zu schaffen. In den frühen 1970er Jahren entwickelten die IBM-Forscher Donald D. Chamberlin und Raymond F. Boyce eine Sprache namens SEQUEL (Structured English Query Language), die später in SQL umbenannt wurde.
 
-**Timeline of key events in SQL history:**
-- 1970s: IBM researchers develop SEQUEL (later renamed to SQL) as part of the [System R project](https://en.wikipedia.org/wiki/System_R)
-- 1980s: SQL becomes an [ANSI](https://en.wikipedia.org/wiki/American_National_Standards_Institute) (American National Standards Institute) standard and later an [ISO](https://en.wikipedia.org/wiki/International_Organization_for_Standardization) (International Organization for Standardization) standard
-- 1990s: SQL becomes widely adopted as the primary language for interacting with relational databases, due to the rise of the Internet and the increasing need for websites and applications to store and retrieve data
-- Today: SQL continues to be widely used for managing and manipulating data in relational databases, supported by a wide range of relational database management systems
+**Zeiten der wichtigsten Ereignisse im SQL-Verlauf:**
+- 1970er: IBM-Forscher entwickeln SEQUEL (später in SQL umbenannt) als Teil des [System R-Projekts] (https://en.wikipedia.org/wiki/System_R)
+- 1980er: SQL wird ein [ANSI](https://en.wikipedia.org/wiki/American_National_Standards_Institute) (American National Standards Institute)-Standard und später ein [ISO](https://en.wikipedia.org/wiki/ International_Organization_for_Standardization) (Internationale Organisation für Normung) Standard
+- 1990er Jahre: SQL wird aufgrund des Aufkommens des Internets und des steigenden Bedarfs an Websites und Anwendungen zum Speichern und Abrufen von Daten weithin als primäre Sprache für die Interaktion mit relationalen Datenbanken angenommen
+- Heute: SQL wird weiterhin häufig zum Verwalten und Manipulieren von Daten in relationalen Datenbanken verwendet, unterstützt von einer Vielzahl relationaler Datenbankverwaltungssysteme
 
-## Evolution of SQL Standards 📜
-SQL standards have been developed and maintained by both American National Standards Institute (ANSI) and International Organization for Standardization (ISO). ANSI published the first SQL standard in 1986, which was then adopted as an ISO standard in 1987. Since then, several new versions of the SQL standard have been released, each adding new features and capabilities. The most recent version is [ISO/IEC 9075:2021 Database languages - SQL](https://www.iso.org/standard/76198.html).
+## Evolution von SQL-Standards 📜
+SQL-Standards wurden sowohl vom American National Standards Institute (ANSI) als auch von der International Organization for Standardization (ISO) entwickelt und gepflegt. ANSI veröffentlichte 1986 den ersten SQL-Standard, der dann 1987 als ISO-Standard übernommen wurde. Seitdem wurden mehrere neue Versionen des SQL-Standards veröffentlicht, die jeweils neue Funktionen und Fähigkeiten hinzugefügt haben. Die neueste Version ist [ISO/IEC 9075:2021 Datenbanksprachen – SQL](https://www.iso.org/standard/76198.html).
 
-## SQL and Relational Database Management Systems (RDBMS) 💻
-SQL is the standard language for relational database management systems (RDBMS). RDBMS is a type of database management system (DBMS) that stores data in the form of related tables. This allows for easy querying and manipulation of data using SQL. Some examples of popular RDBMS include [MySQL](https://www.mysql.com/), [Oracle](https://www.oracle.com/database/) and [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+## SQL und relationale Datenbankverwaltungssysteme (RDBMS) 💻
+SQL ist die Standardsprache für relationale Datenbankmanagementsysteme (RDBMS). RDBMS ist eine Art Datenbankverwaltungssystem (DBMS), das Daten in Form verwandter Tabellen speichert. Dies ermöglicht eine einfache Abfrage und Bearbeitung von Daten mit SQL. Einige Beispiele für beliebte RDBMS sind [MySQL](https://www.mysql.com/), [Oracle](https://www.oracle.com/database/) und [Microsoft SQL Server](https:// www.microsoft.com/en-us/sql-server/sql-server-downloads).
 
-## SQL and the Cloud 🌥
-With the rise of cloud computing, SQL has also become a popular choice for managing data in cloud-based databases. Many cloud providers, such as [Amazon Web Services](https://aws.amazon.com/rds/), [Microsoft Azure](https://azure.microsoft.com/en-us/services/sql-database/) and [Google Cloud Platform](https://cloud.google.com/sql), offer managed SQL databases as a service. This allows developers to easily store and retrieve data without having to manage their own SQL infrastructure.
+## SQL und die Cloud 🌥
+Mit dem Aufkommen von Cloud Computing ist SQL auch zu einer beliebten Wahl für die Verwaltung von Daten in Cloud-basierten Datenbanken geworden. Viele Cloud-Anbieter wie [Amazon Web Services](https://aws.amazon.com/rds/), [Microsoft Azure](https://azure.microsoft.com/en-us/services/sql-database /) und [Google Cloud Platform](https://cloud.google.com/sql), bieten verwaltete SQL-Datenbanken als Service an. Dadurch können Entwickler Daten einfach speichern und abrufen, ohne ihre eigene SQL-Infrastruktur verwalten zu müssen.
 
-Overall, SQL has a rich history and has played a major role in the development and evolution of relational databases. 📈
+Insgesamt hat SQL eine reiche Geschichte und hat eine wichtige Rolle bei der Entwicklung und Evolution relationaler Datenbanken gespielt. 📈

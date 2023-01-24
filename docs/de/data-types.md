@@ -1,26 +1,25 @@
-# Data and Datatypes in SQL 📊
+# Daten und Datentypen in SQL 📊
 
-In SQL, data is stored in tables, where each table is made up of rows (also known as records) and columns (also known as fields). Each column in a table is designed to store a specific type of data, such as text, numbers, or dates. These types of data are referred to as datatypes.
+In SQL werden Daten in Tabellen gespeichert, wobei jede Tabelle aus Zeilen (auch als Datensätze bezeichnet) und Spalten (auch als Felder bezeichnet) besteht. Jede Spalte in einer Tabelle ist darauf ausgelegt, einen bestimmten Datentyp zu speichern, wie z.B. Text, Zahlen oder Datumsangaben. Diese Typen von Daten werden als Datentypen bezeichnet.
 
-SQL supports several different datatypes, including:
-- Numeric data types (e.g. INT, FLOAT, DECIMAL)
-- Character and string data types (e.g. CHAR, VARCHAR, TEXT)
-- Date and time data types (e.g. DATE, TIME, TIMESTAMP)
-- Binary data types (e.g. BLOB, BINARY)
+SQL unterstützt mehrere verschiedene Datentypen, darunter:
+- Numerische Datentypen (z.B. INT, FLOAT, DECIMAL)
+- Zeichen- und String-Datentypen (z.B. CHAR, VARCHAR, TEXT)
+- Datums- und Zeitdatentypen (z.B. DATE, TIME, TIMESTAMP)
+- Binäre Datentypen (z.B. BLOB, BINARY)
 
-Each datatype has its own set of associated functions and operators, which can be used to perform various operations on the data.
-<br>
+Jeder Datentyp hat seine eigene Menge an zugehörigen Funktionen und Operatoren, die zur Durchführung verschiedener Operationen auf den Daten verwendet werden können.
 
-![Data types table](https://renenyffenegger.ch/notes/development/databases/SQL/data-types/hierarchy.png)
+![Datentypen Tabelle](https://renenyffenegger.ch/notes/development/databases/SQL/data-types/hierarchy.png)
 
-## Numeric Data Types 🔢
-Numeric data types are used to store numeric values, such as integers and decimal numbers. Some examples of numeric data types include INT (for integers), FLOAT (for floating-point numbers), and DECIMAL (for fixed-point numbers).
+## Numerische Datentypen 🔢
+Numerische Datentypen werden verwendet, um numerische Werte zu speichern, wie z.B. Ganzzahlen und Dezimalzahlen. Einige Beispiele für numerische Datentypen sind INT (für Ganzzahlen), FLOAT (für Gleitkommazahlen) und DECIMAL (für festkommazahlen).
 
-## Character and String Data Types 💬
-Character and string data types are used to store character and text values, such as names and addresses. Some examples of character and string data types include CHAR (for fixed-length strings), VARCHAR (for variable-length strings), and TEXT (for large amounts of text data).
+## Zeichen- und String-Datentypen 💬
+Zeichen- und String-Datentypen werden verwendet, um Zeichen- und Textwerte zu speichern, wie z.B. Namen und Adressen. Einige Beispiele für Zeichen- und String-Datentypen sind CHAR (für feste Zeichenfolgenlängen), VARCHAR (für variable Zeichenfolgenlängen) und TEXT (für große Mengen an Textdaten).
 
-## Date and Time Data Types 🕰️
-Date and time data types are used to store date and time values, such as birthdays and appointment times. Some examples of date and time data types include DATE (for storing dates), TIME (for storing times), and TIMESTAMP (for storing both date and time values).
+## Datums- und Zeitdatentypen 🕰️
+Datums- und Zeitdatentypen werden verwendet, um Datums- und Zeitwerte zu speichern, wie z.B. Geburtstage und Terminzeiten. Einige Beispiele für Datums- und Zeitdatentypen sind DATE (zum Speichern von Daten), TIME (zum Speichern von Zeiten) und TIMESTAMP (zum Speichern von Datums- und Zeitwerten).
 
-## Binary Data Types 📎
-Binary data types are used to store binary data, such as images, audio, and video files. Some examples of binary data types include BLOB (for storing binary large objects) and BINARY (for storing fixed-length binary data).
+## Binäre Datentypen 📎
+Binäre Datentypen werden verwendet, um binäre Daten zu speichern, wie z.B. Bilder, Audio- und Video-Dateien. Einige Beispiele für binäre Datentypen sind BLOB (zum Speichern von binären Großobjekten) und BINARY (zum Speichern von festkommazahlen binäre Daten).

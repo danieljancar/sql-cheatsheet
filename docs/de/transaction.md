@@ -1,20 +1,20 @@
-# Transactions
-> In SQL, a transaction is a sequence of one or more database operations that are executed as a single logical unit of work. These operations can include inserting, updating, or deleting data, and can span multiple tables and/or rows. Transactions are used to ensure that the database remains in a consistent state, even in the event of errors or system failures. They also provide a way to undo or rollback changes, if necessary. Transactions are typically managed using the BEGIN, COMMIT, and ROLLBACK statements.
+# Transaktionen
+> In SQL ist eine Transaktion eine Folge von einer oder mehreren Datenbankoperationen, die als einzelne logische Arbeitseinheit ausgeführt werden. Diese Operationen können das Einfügen, Aktualisieren oder Löschen von Daten umfassen und sich über mehrere Tabellen und/oder Zeilen erstrecken. Durch Transaktionen wird sichergestellt, dass die Datenbank auch bei Fehlern oder Systemausfällen in einem konsistenten Zustand bleibt. Sie bieten auch eine Möglichkeit, Änderungen bei Bedarf rückgängig zu machen oder rückgängig zu machen. Transaktionen werden normalerweise mit den Anweisungen BEGIN, COMMIT und ROLLBACK verwaltet.
 
-## Features of transactions
-The instructions are carried out according to the ACID principle:
+## Merkmale von Transaktionen
+Die Anweisungen werden nach dem ACID-Prinzip ausgeführt:
 
-- Atomicity (Atomicity): "Everything or nothing" is executed and stored, only a part is not possible.
-- Consistency (Consistency): Before and after the transaction, the data is consistent, that is, free of contradictions and correct.
-- Isolation (Isolation): Changes are only stored and visible to other users when the transaction is complete. During the transaction, the affected data is locked for others.
-- Durability (Durability): The changes remain permanently stored in the database after the transaction.
+- Atomarität (Atomicity): „Alles oder nichts“ wird ausgeführt und gespeichert, nur ein Teil ist nicht möglich.
+- Konsistenz (Consistency): Vor und nach der Transaktion sind die Daten konsistent, das heißt widerspruchsfrei und korrekt.
+- Isolation (Isolation): Änderungen werden erst gespeichert und sind für andere Benutzer sichtbar, wenn die Transaktion abgeschlossen ist. Während der Transaktion sind die betroffenen Daten für andere gesperrt.
+- Dauerhaftigkeit (Durability): Die Änderungen bleiben nach der Transaktion dauerhaft in der Datenbank gespeichert.
 
-Transactions should be as short as possible due to the locks and therefore contain as little SQL code as possible. There is the possibility of rolling back (Rollback) if an error occurs or the transaction is interrupted. This is an implicit rollback to the state before the transaction.
+Transaktionen sollten aufgrund der Sperren so kurz wie möglich sein und daher möglichst wenig SQL-Code enthalten. Es besteht die Möglichkeit des Zurücksetzens (Rollback), wenn ein Fehler auftritt oder die Transaktion unterbrochen wird. Dies ist ein implizites Zurücksetzen auf den Zustand vor der Transaktion.
 
-A logbook is maintained for the undo operation, also called a transaction log. It is logically structured, consisting of instructions and not states.
+Für den Undo-Vorgang wird ein Logbuch geführt, auch Transaktionslog genannt. Es ist logisch aufgebaut, besteht aus Anweisungen und nicht aus Zuständen.
 
-## Transaction Code-Example
-> This transaction will virtualy execute the commands and only execute them to the "real" database as soon as the TRY gets executed without errors. If the TRY fails it will go to the CATCH and ROLLBACK the transaction.
+## Transaktionscode-Beispiel
+> Diese Transaktion führt die Befehle virtuell aus und führt sie nur in der "echten" Datenbank aus, sobald der TRY fehlerfrei ausgeführt wird. Wenn TRY fehlschlägt, geht es zu CATCH und ROLLBACK der Transaktion.
 ```sql¨
 BEGIN TRANSACTION 
 

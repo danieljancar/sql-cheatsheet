@@ -1,53 +1,53 @@
-# Logical Operations
+# Logische Operationen
 ## AND
-> logical AND link
-```sql
-    SELECT * FROM table1 WHERE age < 18 AND plz = 5000;
+> logische AND-Verknüpfung
+```SQL
+    SELECT * FROM table1 WHERE alter < 18 AND plz = 5000;
 ```
 ## OR
-> logical other link
-```sql
-    SELECT * FROM table1 WHERE age < 18 OR age > 65;
+> logischer OR-Verknüpfung
+```SQL
+    SELECT * FROM table1 WHERE alter < 18 OR alter > 65;
 ```
 ## NOT
-> not same (!=)
-```sql
+> nicht gleich (!=)
+```SQL
     SELECT * FROM tabelle WHERE NOT id = 1;MAX()
 ```
 ## BETWEEN
-> BETWEEN checks whether the checked value is between two values.
-```sql
+> BETWEEN prüft, ob der geprüfte Wert zwischen zwei Werten liegt.
+```SQL
     SELECT id, column2, column3 FROM table1 WHERE id BETWEEN 1 AND 10;
 
     SELECT id, column2, column3 FROM table1 
     WHERE eintritt BETWEEN '2020-01-01' AND '2020-12-31'; 
 
-    -- comparison operators can always be used instead of BETWEEN
-    -- and these are linked with AND
+    -- Vergleichsoperatoren können immer anstelle von BETWEEN verwendet werden
+    -- und diese werden mit UND verknüpft
     SELECT id, column2, column3 FROM table1 
     WHERE eintritt >= '2020-01-01' AND eintritt <= '2020-12-31';
 ```
 ## IN
-> The IN operator can be used to determine whether a value matches a value from a list. In the list, for example, you can list certain numbers that are to be compared with a column:
-```sql
+> Mit dem IN-Operator kann festgestellt werden, ob ein Wert mit einem Wert aus einer Liste übereinstimmt. In der Liste können Sie beispielsweise bestimmte Zahlen auflisten, die mit einer Spalte verglichen werden sollen:
+```SQL
     SELECT id, column2, column3 FROM table1 WHERE id IN (1, 2, 3);
 ```
 ## LIKE
-> LIKE is ideal for more complex text queries. LIKE searches for a pattern in a string and is therefore also known as pattern matching. There are different placeholders:
-```sql
-    -- % -> Any numbers of characters 
+> LIKE ist ideal für komplexere Textabfragen. LIKE sucht nach einem Muster in einem String und wird daher auch als Mustervergleich bezeichnet. Es gibt verschiedene Platzhalter:
+```SQL
+    -- % -> Beliebig viele Zeichen
     SELECT id, column2, column3 FROM table1 WHERE column2 LIKE '%peter%';
-    -- _ -> one characters 
+    -- _ -> ein Zeichen
     SELECT id, column2, column3 FROM table1 WHERE column2 LIKE '_peter';
-    -- [] -> placeholder for a-p
+    -- [] -> Platzhalter für a-p
     SELECT id, column2, column3 FROM table1 WHERE column2 LIKE '[a-p]peter';
-    -- [^] -> placeholder for one character between a-p
+    -- [^] -> Platzhalter für ein Zeichen zwischen a-p
     SELECT id, column2, column3 FROM table1 WHERE column2 LIKE '[^a-p]peter';
 ```
 ## NULL
-> If you ask is an item Null or not you have to use IS
-```sql
-    SELECT * FROM table1 WHERE column2 IS NULL;
-    -- or NOT
-    SELECT * FROM table1en WHERE column2 IS NOT NULL;
+> Wenn Sie fragen, ob ein Item Null ist oder nicht, müssen Sie IS verwenden
+```SQL
+    SELECT * FROM table1 WHERE Spalte2 IS NULL;
+    -- oder nicht
+    SELECT * FROM table1en WHERE Spalte2 NICHT IS NULL;
 ```

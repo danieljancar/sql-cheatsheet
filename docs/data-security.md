@@ -5,7 +5,14 @@ Authentication is the process of verifying the identity of a user. In the contex
 > This command is used to create a new user with a specified password
 > U normally need to use the master database to do something with users ```use master```
 ```sql
-    CREATE USER user_name IDENTIFIED BY 'password';
+    USE master;
+    CREATE LOGIN login_name
+    WITH PASSWORD = 'passwort', CHECK_POLICY = OFF;
+```
+> Login for a specific user
+```sql
+    USE myDatabase;
+    CREATE USER user_name FOR LOGIN login_name;
 ```
 > This command is used to grant a user access to a specific database or table
 ```sql
@@ -13,6 +20,24 @@ Authentication is the process of verifying the identity of a user. In the contex
 ```
 ## AUTHORIZATION
 Authorization is the process of granting or revoking access to specific resources based on a user's role or level of privilege. The REVOKE statement is used to revoke a user's access to a specific database or table.
+> Assign a server role to the login
+```sql
+    USE master;
+    ALTER SERVER ROLE role_name ADD MEMBER login_name;
+```
+> Revoke a server role from the login
+```sql
+    ALTER SERVER ROLE role_name DROP MEMBER login_name;
+```
+> Assign a database role to the user
+```sql
+    USE mydatabase;
+    ALTER ROLE role_name ADD MEMBER user_name;
+```
+> Revoke a role from the user
+```sql
+    ALTER ROLE role_name DROP MEMBER user_name;
+```
 > This command is used to revoke a user's access to a specific database or table
 ```sql
     REVOKE SELECT, INSERT, UPDATE, DELETE ON table_name FROM user_name;
