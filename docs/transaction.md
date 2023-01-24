@@ -21,11 +21,11 @@ BEGIN TRANSACTION
     BEGIN TRY
         UPDATE example set name = 'Max' where exampleId = 1 
         DELETE from example where example = 7
+        COMMIT TRANSACTION
     END TRY 
 
     BEGIN CATCH
         ROLLBACK TRANSACTION
     END CATCH
-
-COMMIT TRANSACTION
+    
 ```
