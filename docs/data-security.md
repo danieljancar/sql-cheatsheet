@@ -68,6 +68,10 @@ Authorization is the process of granting or revoking access to specific resource
 ```sql
     REVOKE SELECT, INSERT, UPDATE, DELETE ON table_name FROM user_name;
 ```
+> This command is used to deny a user's access to a specific database or table
+```sql
+    DENY SELECT, INSERT, UPDATE, DELETE ON table_name TO database_user;
+```
 ## ROW LEVEL SECURITY
 Row level security is a feature that allows you to restrict access to specific rows in a table based on a user's role or level of privilege. The CREATE POLICY statement is used to create a policy that restricts access to specific rows in a table based on a user's role.
 > This command is used to create a policy that restricts access to specific rows in a table based on a user's role

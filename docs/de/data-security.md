@@ -68,6 +68,10 @@ Autorisierung ist der Prozess des Gewährens oder Widerrufens des Zugriffs auf b
 ```SQL
     REVOKE SELECT, INSERT, UPDATE, DELETE ON table_name FROM user_name;
 ```
+> Dieser Befehl wird verwendet, um den Zugriff eines Benutzers auf eine bestimmte Datenbank oder Tabelle zu sperren
+```sql
+    DENY SELECT, INSERT, UPDATE, DELETE ON table_name TO database_user;
+```
 ## SICHERHEIT AUF ZEILENEBENE
 Sicherheit auf Zeilenebene ist eine Funktion, mit der Sie den Zugriff auf bestimmte Zeilen in einer Tabelle basierend auf der Rolle oder Berechtigungsebene eines Benutzers einschränken können. Die CREATE POLICY-Anweisung wird verwendet, um eine Richtlinie zu erstellen, die den Zugriff auf bestimmte Zeilen in einer Tabelle basierend auf der Rolle eines Benutzers einschränkt.
 > Dieser Befehl wird verwendet, um eine Richtlinie zu erstellen, die den Zugriff auf bestimmte Zeilen in einer Tabelle basierend auf der Rolle eines Benutzers einschränkt
