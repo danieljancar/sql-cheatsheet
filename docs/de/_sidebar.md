@@ -22,7 +22,7 @@
 - Other
 
   - [Relationale Datenbanken](de/rdb.md)   
-  - [🔭 SQL Kurs/Dokumentation von ICT-BZ](https://m106.ict-bz.ch/)
+  - [🔭 SQL Dokumentation von ICT-BZ](https://m106.ict-bz.ch/)
   - [🔭 SQL Dokumentation von w3schools](https://www.w3schools.com/sql/)
 
 - Installation 
