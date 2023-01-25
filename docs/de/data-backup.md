@@ -11,3 +11,40 @@ WITH  FILE = 1,
 MOVE N'dbname' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\dbname.mdf',  
 MOVE N'dbname_log' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\dbname_log.ldf',  NOUNLOAD,  STATS = 5
 ```
+
+## Komplettes Backup mit Powershell (lokal)
+>
+```sql
+    $credential = Get-Credential
+
+    Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database <myDatabase> -BackupAction Database -Credential $credential
+```
+
+## Backup auf ein Festplattengerät
+> This backs up your database to a disk device
+```sql
+    USE SQLTestDB;
+    GO
+    BACKUP DATABASE SQLTestDB
+    TO DISK = 'c:\tmp\SQLTestDB.bak'
+    WITH FORMAT,
+        MEDIANAME = 'SQLServerBackups',
+        NAME = 'Full Backup of SQLTestDB';
+    GO
+```
+
+## Ein verschlüsseltes Backup erstellen
+> This creates a encrypted backup of a database
+```sql
+    -- Create the master key
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
+
+    -- If the master key already exists, open it in the same session that you create the certificate (see next step)
+    OPEN MASTER KEY DECRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe'
+
+    -- Create the certificate encrypted by the master key
+    CREATE CERTIFICATE MyCertificate
+    WITH SUBJECT = 'Backup Cert', EXPIRY_DATE = '20201031';  
+```
+
+Mehr Informationen [hier](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases?view=sql-server-ver16).

@@ -47,4 +47,4 @@
     WITH SUBJECT = 'Backup Cert', EXPIRY_DATE = '20201031';  
 ```
 
-Find additional information [here](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases?view=sql-server-ver16)
+Find additional information [here](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases?view=sql-server-ver16).
