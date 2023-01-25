@@ -72,10 +72,10 @@ Authorization is the process of granting or revoking access to specific resource
 ## Predefined Roles
 > Creating server logins or database users alone does not give them explicit rights to perform operations on the server or the database. Only the default membership in the public role allows principals to have the permissions assigned to the public role. Roles are to be understood as a collection of different, usually logically related permissions, and serve for simple and clear permission management. SQL Server comes with some predefined roles.
 
-|Principal|Description|Example Roles|
-|---|---|---|
-|Server Login|Server-level authorization. Typically, there is no direct assignment of permissions, but membership in specific server roles. Login permissions are stored in the master system database|sysadmin, serveradmin, securityadmin|
-|Database User|Database-level authorization. By assigning predefined database roles, a simple permission management can be implemented. Users, database roles, and the permissions granted to them are stored in the respective database.|db_datareader, db_datawriter|
+| Principal     | Description                                                                                                                                                                                                                | Example Roles                        |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| Server Login  | Server-level authorization. Typically, there is no direct assignment of permissions, but membership in specific server roles. Login permissions are stored in the master system database                                   | sysadmin, serveradmin, securityadmin |
+| Database User | Database-level authorization. By assigning predefined database roles, a simple permission management can be implemented. Users, database roles, and the permissions granted to them are stored in the respective database. | db_datareader, db_datawriter         |
 
 ## ROW LEVEL SECURITY
 Row level security is a feature that allows you to restrict access to specific rows in a table based on a user's role or level of privilege. The CREATE POLICY statement is used to create a policy that restricts access to specific rows in a table based on a user's role.
@@ -88,12 +88,32 @@ Row level security is a feature that allows you to restrict access to specific r
 
 ## DYNAMIC DATA MASKING
 Dynamic data masking is a feature that allows you to mask sensitive data in a table. The ALTER TABLE statement is used to add a masking function to a specific column in a table.
-> This command is used to mask sensitive data in a table
-```sql
-    ALTER TABLE table_name
-    ADD MASKED WITH (FUNCTION = 'masking_function')
-    FOR COLUMN sensitive_column;
+> Default
+ ```sql
+ALTER TABLE table_name
+ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'default()')
 ```
+> Email
+```sql
+ALTER TABLE table_name
+ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'email()')
+```
+> Random
+ ```sql
+ALTER TABLE table_name
+ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'random(1, 99)')
+```
+> Custom String
+```sql
+ALTER TABLE table_name
+ ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')
+```
+> Drop DDM
+```sql
+ALTER TABLE table_name
+ ALTER COLUMN example_column DROP MASKED WITH (FUNCTION = 'email()')
+ ```
+
 ## ENCRYPTION
 Encryption is the process of converting plain text into an unreadable format to protect it from unauthorized access. The ALTER TABLE statement is used to add encryption to a specific column in a table.
 > This command is used to encrypt a specific column in a table
