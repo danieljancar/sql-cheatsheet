@@ -18,8 +18,34 @@ Authentifizierung ist der Prozess der Überprüfung der Identität eines Benutze
 ```SQL
     GRANT SELECT, INSERT, UPDATE, DELETE ON table_name TO user_name;
 ```
+> Objektverechtigung vergeben auf einzelne Tabelle
+```sql
+  GRANT SELECT ON example_table TO user_name;
+```
+> Gewähren Sie einem Benutzer bestimmte Berechtigungen für ein Schema
+```sql
+    GRANT UPDATE, INSERT, DELETE ON SCHEMA::Test TO user_name;
+```
+> Entfernt angegebene Berechtigungen für Schemas von einem Benutzer
+```sql
+    REVOKE UPDATE, INSERT, DELETE ON SCHEMA::Test FROM user_name;
+```
+> Fügen Sie der Rolle einen Benutzer hinzu
+```sql
+    ALTER ROLE role_name ADD MEMBER user_name;
+```
+> Benutzer aus einer Rolle entfernen
+```sql
+    ALTER ROLE role_name DROP MEMBER user_name;
+```
 ## AUTORISIERUNG
 Autorisierung ist der Prozess des Gewährens oder Widerrufens des Zugriffs auf bestimmte Ressourcen basierend auf der Rolle oder Berechtigungsebene eines Benutzers. Die REVOKE-Anweisung wird verwendet, um den Zugriff eines Benutzers auf eine bestimmte Datenbank oder Tabelle zu widerrufen.
+> Führen Sie Befehle als bestimmter Benutzer mit bestimmten Regeln für die Datenbank aus
+```sql
+    Execute as  User = "user_name"
+
+    Revert
+```
 > Weisen Sie dem Login eine Serverrolle zu
 ```sql
     USE master;

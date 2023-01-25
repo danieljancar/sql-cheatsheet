@@ -18,8 +18,34 @@ Authentication is the process of verifying the identity of a user. In the contex
 ```sql
     GRANT SELECT, INSERT, UPDATE, DELETE ON table_name TO user_name;
 ```
+> Object permission assigned to individual table
+```sql
+    GRANT SELECT ON example_table TO user_name;
+```
+> Grant a user specified permissions on a schema
+```sql
+    GRANT UPDATE, INSERT, DELETE ON SCHEMA::Test TO user_name;
+```
+> Remove specified permissions for schemas from a user
+```sql
+    REVOKE UPDATE, INSERT, DELETE ON SCHEMA::Test FROM user_name;
+```
+> Add a user to role
+```sql
+    ALTER ROLE role_name ADD MEMBER user_name;
+```
+> Remove user from a role
+```sql
+    ALTER ROLE role_name DROP MEMBER user_name;
+```
 ## AUTHORIZATION
 Authorization is the process of granting or revoking access to specific resources based on a user's role or level of privilege. The REVOKE statement is used to revoke a user's access to a specific database or table.
+> Execute commands as a specifc user with specific rules on the database
+```sql
+    Execute as  User = "user_name"
+
+    Revert
+```
 > Assign a server role to the login
 ```sql
     USE master;
