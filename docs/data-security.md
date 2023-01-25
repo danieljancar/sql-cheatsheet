@@ -90,28 +90,28 @@ Row level security is a feature that allows you to restrict access to specific r
 Dynamic data masking is a feature that allows you to mask sensitive data in a table. The ALTER TABLE statement is used to add a masking function to a specific column in a table.
 > Default
  ```sql
-ALTER TABLE table_name
-ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'default()')
+    ALTER TABLE table_name
+    ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'default()')
 ```
 > Email
 ```sql
-ALTER TABLE table_name
-ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'email()')
+    ALTER TABLE table_name
+    ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'email()')
 ```
 > Random
  ```sql
-ALTER TABLE table_name
-ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'random(1, 99)')
+    ALTER TABLE table_name
+    ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'random(1, 99)')
 ```
 > Custom String
 ```sql
-ALTER TABLE table_name
- ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')
+    ALTER TABLE table_name
+    ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')
 ```
 > Drop DDM
 ```sql
-ALTER TABLE table_name
- ALTER COLUMN example_column DROP MASKED WITH (FUNCTION = 'email()')
+    ALTER TABLE table_name
+    ALTER COLUMN example_column DROP MASKED WITH (FUNCTION = 'email()')
  ```
 
 ## ENCRYPTION
