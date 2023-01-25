@@ -11,17 +11,23 @@
     MOVE N'dbname' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\dbname.mdf',  
     MOVE N'dbname_log' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\dbname_log.ldf',  NOUNLOAD,  STATS = 5
 ```
-
+## Backup Database
+> This creates a backup of your database.
+```sql
+    BACKUP DATABASE [DB_name]
+    TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\WideWorldImporters.bak' 
+    WITH NOFORMAT, NOINIT, NAME = N'WideWorldImporters vollständige Datenbanksicherung', SKIP, STATS = 10
+    GO
+```
 ## Full Backup with Powershell (local)
->
+> This command in Powershell creates a backup of a database.
 ```sql
     $credential = Get-Credential
 
     Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database <myDatabase> -BackupAction Database -Credential $credential
 ```
-
 ## Backup to a Disk Device
-> This backs up your database to a disk device
+> This backs up your database to a disk device.
 ```sql
     USE SQLTestDB;
     GO
@@ -32,9 +38,8 @@
         NAME = 'Full Backup of SQLTestDB';
     GO
 ```
-
 ## Backup Encrypted Database
-> This creates a encrypted backup of a database
+> This creates a encrypted backup of a database.
 ```sql
     -- Create the master key
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
