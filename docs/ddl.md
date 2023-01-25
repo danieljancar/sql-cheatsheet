@@ -85,4 +85,10 @@ A foreign key is a column or set of columns in a table that is used to establish
 ```sql
     FOREIGN KEY (column) REFERENCES referenced_table(referenced_column)
 ```
+**CHECK**
 In summary, primary keys are used to uniquely identify each record in a table and foreign keys are used to create links between tables, ensuring data integrity and consistency.
+If you want to define a simple validation or business rule on a table, CHECK is suitable. 
+> This constraint forces a value to belong to a specific range.
+```SQL
+    ALTER TABLE tabelle1 ADD CHECK (feld2 > 100);
+```

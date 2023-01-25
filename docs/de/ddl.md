@@ -86,3 +86,9 @@ Ein Fremdschlüssel ist eine Spalte oder eine Gruppe von Spalten in einer Tabell
     FOREIGN KEY (Spalte) REFERENCES referenced_table(referenced_column)
 ```
 Zusammenfassend werden Primärschlüssel verwendet, um jeden Datensatz in einer Tabelle eindeutig zu identifizieren, und Fremdschlüssel werden verwendet, um Verknüpfungen zwischen Tabellen herzustellen, um die Datenintegrität und -konsistenz sicherzustellen.
+**CHECK**
+Für den Fall, dass du eine einfache Gültigkeits- oder Geschäftsregel auf einer Tabelle definieren möchtest, eignet sich CHECK. 
+> Dieser Constraint erzwingt die Zugehörigkeit eines Wertes zu einem bestimmten Bereich.
+```SQL
+    ALTER TABLE tabelle1 ADD CHECK (feld2 > 100);
+```
