@@ -91,12 +91,32 @@ Sicherheit auf Zeilenebene ist eine Funktion, mit der Sie den Zugriff auf bestim
 ```
 ## DYNAMISCHE DATENMASKEN
 Die dynamische Datenmaskierung ist eine Funktion, mit der Sie vertrauliche Daten in einer Tabelle maskieren können. Die ALTER TABLE-Anweisung wird verwendet, um einer bestimmten Spalte in einer Tabelle eine Maskierungsfunktion hinzuzufügen.
-> Dieser Befehl wird verwendet, um sensible Daten in einer Tabelle zu maskieren
+> Default
+ ```sql
+    ALTER TABLE table_name
+    ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'default()')
+```
+> Email
 ```sql
     ALTER TABLE table_name
-    ADD MASKED WITH (FUNCTION = 'masking_function')
-    FOR COLUMN sensitive_column;
+    ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'email()')
 ```
+> Zufällig
+ ```sql
+    ALTER TABLE table_name
+    ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'random(1, 99)')
+```
+> Eigener String
+```sql
+    ALTER TABLE table_name
+    ALTER COLUMN example_column ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')
+```
+> DDM löschen
+```sql
+    ALTER TABLE table_name
+    ALTER COLUMN example_column DROP MASKED WITH (FUNCTION = 'email()')
+ ```
+
 ## VERSCHLÜSSELUNG
 Verschlüsselung ist der Prozess der Umwandlung von Klartext in ein unlesbares Format, um ihn vor unbefugtem Zugriff zu schützen. Die ALTER TABLE-Anweisung wird verwendet, um einer bestimmten Spalte in einer Tabelle Verschlüsselung hinzuzufügen.
 > Dieser Befehl wird verwendet, um eine bestimmte Spalte in einer Tabelle zu verschlüsseln
