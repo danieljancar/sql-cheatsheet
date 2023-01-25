@@ -68,6 +68,19 @@ Autorisierung ist der Prozess des Gewährens oder Widerrufens des Zugriffs auf b
 ```SQL
     REVOKE SELECT, INSERT, UPDATE, DELETE ON table_name FROM user_name;
 ```
+> Dieser Befehl wird verwendet, um den Zugriff eines Benutzers auf eine bestimmte Datenbank oder Tabelle zu sperren
+```sql
+    REVOKE SELECT, INSERT, UPDATE, DELETE ON table_name TO database_user;
+```
+
+## Predefined Roles
+> Das Erstellen von Server-Logins oder Datenbank-Benutzern allein gibt ihnen keine expliziten Rechte, um Aktionen auf dem Server oder der Datenbank auszuführen. Lediglich die Standardmitgliedschaft in der öffentlichen Rolle ermöglicht es den Prinzipien, die der öffentlichen Rolle zugewiesenen Berechtigungen zu haben. Rollen sollten als Sammlung verschiedener, in der Regel logisch miteinander verbundener Berechtigungen verstanden werden und dienen der einfachen und übersichtlichen Berechtigungsverwaltung. SQL Server kommt mit einigen vordefinierten Rollen.
+
+|Principal|Beschreibung|Beispielrollen|
+|---|---|---|
+|Server Login|Autorisierung auf Serverebene. In der Regel keine direkte Zuweisung von Berechtigungen, sondern Mitgliedschaft in bestimmten Serverrollen. Login-Berechtigungen werden in der System-Datenbank master gespeichert|sysadmin, serveradmin, securityadmin|
+|Database User|Autorisierung auf Datenbankebene. Mit der Zuweisung von bereits vordefinierten Datenbankrollen kann eine einfache Berechtigungsverwaltung umgesetzt werden. User, Datenbankrollen und die an sie erteilten Berechtigungen werden in der jeweiligen Datenbank gespeichert.|db_datareader, db_datawriter|
+
 ## SICHERHEIT AUF ZEILENEBENE
 Sicherheit auf Zeilenebene ist eine Funktion, mit der Sie den Zugriff auf bestimmte Zeilen in einer Tabelle basierend auf der Rolle oder Berechtigungsebene eines Benutzers einschränken können. Die CREATE POLICY-Anweisung wird verwendet, um eine Richtlinie zu erstellen, die den Zugriff auf bestimmte Zeilen in einer Tabelle basierend auf der Rolle eines Benutzers einschränkt.
 > Dieser Befehl wird verwendet, um eine Richtlinie zu erstellen, die den Zugriff auf bestimmte Zeilen in einer Tabelle basierend auf der Rolle eines Benutzers einschränkt

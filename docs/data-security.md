@@ -85,6 +85,7 @@ Row level security is a feature that allows you to restrict access to specific r
     FOR SELECT
     WITH CHECK (condition)
 ```
+
 ## DYNAMIC DATA MASKING
 Dynamic data masking is a feature that allows you to mask sensitive data in a table. The ALTER TABLE statement is used to add a masking function to a specific column in a table.
 > This command is used to mask sensitive data in a table
