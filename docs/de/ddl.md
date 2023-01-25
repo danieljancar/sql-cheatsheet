@@ -27,12 +27,12 @@ Der Befehl CREATE wird verwendet, um eine neue Tabelle mit angegebenen Spalten u
 ```
 > Eine Tabelle mit Schema erstellen
 ```SQL
-    CREATE TABLE [schema.]tabelle(
-    spalte1 datentyp [ NULL | NOT NULL ],
-    spalte2 datentyp [ NULL | NOT NULL ],
-    spalte3 datentyp [ NULL | NOT NULL ],
-   ....
-);
+   CREATE TABLE schema.table_name (
+        id INT NOT NULL IDENTITY(1,1),
+        column1 CHAR(4),
+        column2 INT,
+        column3 VARCHAR(50)
+    );
 ```
 ## Schema
 > Innerhalb der neu erstellten Datenbank erstellen wir nun ein neues Schema:

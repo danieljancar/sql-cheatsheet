@@ -27,12 +27,12 @@ The CREATE command is used to create a new table with specified columns and data
 ```
 > Create a Table with a Schema
 ```SQL
-    CREATE TABLE [schema.]tabelle(
-    spalte1 datentyp [ NULL | NOT NULL ],
-    spalte2 datentyp [ NULL | NOT NULL ],
-    spalte3 datentyp [ NULL | NOT NULL ],
-   ....
-);
+    CREATE TABLE schema.table_name (
+        id INT NOT NULL IDENTITY(1,1),
+        column1 CHAR(4),
+        column2 INT,
+        column3 VARCHAR(50)
+    );
 ```
 ## Schema
 > Creating a Schema in a Database
