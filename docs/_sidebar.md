@@ -22,7 +22,8 @@
 - Other
 
   - [Relational Databases](rdb.md)   
-  - [Other good SQL doc by ICT-BZ](https://m106.ict-bz.ch/)
+  - [🔭 SQL documentation by ICT-BZ](https://m106.ict-bz.ch/)
+  - [🔭 SQL documentation by w3schools](https://www.w3schools.com/sql/)
 
 - Installation 
 
