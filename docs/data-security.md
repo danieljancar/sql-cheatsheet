@@ -68,6 +68,15 @@ Authorization is the process of granting or revoking access to specific resource
 ```sql
     REVOKE SELECT, INSERT, UPDATE, DELETE ON table_name FROM user_name;
 ```
+
+## Predefined Roles
+> Creating server logins or database users alone does not give them explicit rights to perform operations on the server or the database. Only the default membership in the public role allows principals to have the permissions assigned to the public role. Roles are to be understood as a collection of different, usually logically related permissions, and serve for simple and clear permission management. SQL Server comes with some predefined roles.
+
+|Principal|Description|Example Roles|
+|---|---|---|
+|Server Login|Server-level authorization. Typically, there is no direct assignment of permissions, but membership in specific server roles. Login permissions are stored in the master system database|sysadmin, serveradmin, securityadmin|
+|Database User|Database-level authorization. By assigning predefined database roles, a simple permission management can be implemented. Users, database roles, and the permissions granted to them are stored in the respective database.|db_datareader, db_datawriter|
+
 ## ROW LEVEL SECURITY
 Row level security is a feature that allows you to restrict access to specific rows in a table based on a user's role or level of privilege. The CREATE POLICY statement is used to create a policy that restricts access to specific rows in a table based on a user's role.
 > This command is used to create a policy that restricts access to specific rows in a table based on a user's role
