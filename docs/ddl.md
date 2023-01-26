@@ -45,6 +45,10 @@ The CREATE command is used to create a new table with specified columns and data
     GO
     CREATE SCHEMA schema106;
 ```
+> Changin a Schema of a existing table
+```SQL
+    ALTER SCHEMA newSchema_name TRANSFER oldSchema.table_name
+```
 ## ALTER
 The ALTER command is used to make changes to an existing table, such as adding a new column, modifying an existing column, or deleting a column.
 > This command is used to add a new column to an existing table

@@ -45,6 +45,10 @@ Der Befehl CREATE wird verwendet, um eine neue Tabelle mit angegebenen Spalten u
     GO
     CREATE SCHEMA schema106;
 ```
+> Wechselt das Schema einer Tabelle
+```SQL
+    ALTER SCHEMA newSchema_name TRANSFER oldSchema.table_name
+```
 ## ALTER
 Der Befehl ALTER wird verwendet, um Änderungen an einer vorhandenen Tabelle vorzunehmen, z. B. eine neue Spalte hinzuzufügen, eine vorhandene Spalte zu ändern oder eine Spalte zu löschen.
 > Dieser Befehl wird verwendet, um einer bestehenden Tabelle eine neue Spalte hinzuzufügen
@@ -57,15 +61,15 @@ Der Befehl ALTER wird verwendet, um Änderungen an einer vorhandenen Tabelle vor
     ALTER TABLE table_name
     MODIFY column_name data_type constraint;
 ```
-> Dieser Befehl wird verwendet, um einen constraint zu löschen
-```SQL
-    ALTER TABLE table_name
-    DROP CONSTRAINT constraint_name;
-```
 > Dieser Befehl wird verwendet, um eine Spalte aus einer bestehenden Tabelle zu löschen
 ```SQL
     ALLTER TABLE table_name
     DROP COLUMN column_name;
+```
+> Dieser Befehl wird verwendet, um einen constraint zu löschen
+```SQL
+    ALTER TABLE table_name
+    DROP CONSTRAINT constraint_name;
 ```
 
 
