@@ -92,3 +92,7 @@ If you want to define a simple validation or business rule on a table, CHECK is 
 ```SQL
     ALTER TABLE tabelle1 ADD CHECK (feld2 > 100);
 ```
+> A other Option
+```SQL
+    ALTER TABLE table_name ADD CONSTRAINT CHK_Employees CHECK (column1 = 'A' or column1 = 'B' or column1 = 'C' or column1 = 'D')
+```

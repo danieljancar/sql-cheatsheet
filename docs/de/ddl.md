@@ -92,3 +92,7 @@ Für den Fall, dass du eine einfache Gültigkeits- oder Geschäftsregel auf eine
 ```SQL
     ALTER TABLE tabelle1 ADD CHECK (feld2 > 100);
 ```
+> Eine andere Option wäre
+```SQL
+    ALTER TABLE table_name ADD CONSTRAINT CHK_Employees CHECK (column1 = 'A' or column1 = 'B' or column1 = 'C' or column1 = 'D')
+```
