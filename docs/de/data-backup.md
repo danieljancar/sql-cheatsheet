@@ -4,12 +4,8 @@
 ## Datenbank Wiederherstellen
 > Dieser Befehl wird verwendet, um eine Datenbank wiederherzustellen (z. B. eine .bak-Datei)
 ```sql
-USE [master]
-RESTORE DATABASE [dbname] 
-FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\dbname.bak' 
-WITH  FILE = 1,  
-MOVE N'dbname' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\dbname.mdf',  
-MOVE N'dbname_log' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\dbname_log.ldf',  NOUNLOAD,  STATS = 5
+    use master
+    RESTORE DATABASE db_name FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\db_name.bak'
 ```
 ## Backup Datenbank
 > Diese Kommands erstellen ein Backup deiner Datenbank.
@@ -18,7 +14,7 @@ MOVE N'dbname_log' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVE
     TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\WideWorldImporters.bak' 
     WITH NOFORMAT, NOINIT, NAME = N'WideWorldImporters vollständige Datenbanksicherung', SKIP, STATS = 10
     GO
-```
+``` 
 
 ## Komplettes Backup mit Powershell (lokal)
 > Erstellt ein Backup deiner Datenbank mit Powershell.
