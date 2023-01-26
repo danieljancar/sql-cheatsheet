@@ -63,6 +63,11 @@ The ALTER command is used to make changes to an existing table, such as adding a
     ALTER TABLE table_name
     DROP COLUMN column_name;
 ```
+> This command is used to delete a constraint.
+```SQL
+    ALTER TABLE table_name
+    DROP CONSTRAINT constraint_name;
+```
 
 ## Rename
 The rename command is used to rename tables and columns

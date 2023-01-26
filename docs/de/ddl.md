@@ -57,7 +57,11 @@ Der Befehl ALTER wird verwendet, um Änderungen an einer vorhandenen Tabelle vor
     ALTER TABLE table_name
     MODIFY column_name data_type constraint;
 ```
-
+> Dieser Befehl wird verwendet, um einen constraint zu löschen
+```SQL
+    ALTER TABLE table_name
+    DROP CONSTRAINT constraint_name;
+```
 > Dieser Befehl wird verwendet, um eine Spalte aus einer bestehenden Tabelle zu löschen
 ```SQL
     ALLTER TABLE table_name
