@@ -59,6 +59,18 @@ The ALTER command is used to make changes to an existing table, such as adding a
     ALTER TABLE table_name
     DROP COLUMN column_name;
 ```
+
+## Rename
+The rename command is used to rename tables and columns
+> This renames a table
+```sql
+ EXEC sp_rename 'existing_table_name', 'new_table_name'; 
+```
+> This renames a column
+```sql
+ EXEC sp_rename 'existing_table_name.existing_column_name', 'new_table_name.new_column_name'; 
+```
+
 ## DROP
 The DROP command is used to delete an existing table, its structure, and all its data permanently from the database. It can also be used to delete other database objects such as views, indexes, and sequences. Once a table is dropped, all the data stored in it will be lost and cannot be recovered. It is important to use this command with caution as it cannot be undone.
 > This command is used to delete an existing table and all its data
