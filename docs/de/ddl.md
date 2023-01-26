@@ -59,6 +59,19 @@ Der Befehl ALTER wird verwendet, um Änderungen an einer vorhandenen Tabelle vor
     ALLTER TABLE table_name
     DROP COLUMN column_name;
 ```
+
+
+## Rename
+Der Rename Kommand ändert den Namen von Tabellen und Kolumnen
+> Dies ändert den Namen einer Tabelle
+```sql
+ EXEC sp_rename 'existing_table_name', 'new_table_name'; 
+```
+> Dies ändert den Namen eines Columns in einer Tabelle
+```sql
+ EXEC sp_rename 'existing_table_name.existing_column_name', 'new_table_name.new_column_name'; 
+```
+
 ## DROP
 Der DROP-Befehl wird verwendet, um eine bestehende Tabelle, ihre Struktur und alle ihre Daten dauerhaft aus der Datenbank zu löschen. Es kann auch verwendet werden, um andere Datenbankobjekte wie Ansichten, Indizes und Sequenzen zu löschen. Sobald eine Tabelle gelöscht wird, gehen alle darin gespeicherten Daten verloren und können nicht wiederhergestellt werden. Es ist wichtig, diesen Befehl mit Vorsicht zu verwenden, da er nicht rückgängig gemacht werden kann.
 > Dieser Befehl wird verwendet, um eine bestehende Tabelle und alle ihre Daten zu löschen
