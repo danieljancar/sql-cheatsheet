@@ -8,9 +8,13 @@ Das Informationskapitel dient dazu, bestimmte Informationen über SQL herauszuge
 ```
 ## EXEC
 Der EXEC-Befehl wird verwendet, um die Namen in SQL zu ändern
-> Dieser Befehl wird verwendet, um den Namen in einer bestimmten Spalte oder Tabelle zu ändern.
+> Dieser Befehl wird verwendet, um den Namen in einer bestimmten Tabelle zu ändern.
 ```SQL
-    EXEC sp_rename 'schema_name', 'descripton', 'COLUMN';
+    EXEC sp_rename 'old_table_name', 'new_table_name';
+```
+> Dieser Befehl wird verwendet, um den Namen in einer bestimmten Spalte zu ändern.
+```SQL
+    EXEC sp_rename 'old_column_name', 'new_column_name', 'COLUMN';
 ```
 > Dieser Befehl wird verwendet, um die Informationen in einer bestimmten Tabelle anzuzeigen.
 ```SQL

@@ -8,9 +8,13 @@ The Informations Chapter is used to give out specified Informations about SQL.
 ```
 ## EXEC
 The EXEC command is used to change the names in SQL
-> This command is used to change the name in a specific column or table.
-```sql       
-    EXEC sp_rename 'schema_name', 'descripton', 'COLUMN';
+> This command is used to change the name in a specific table.
+```SQL
+    EXEC sp_rename 'old_table_name', 'new_table_name';
+```
+> This command is used to change the name in a specific column.
+```SQL
+    EXEC sp_rename 'old_column_name', 'new_column_name', 'COLUMN';
 ```
 > This command is used to show the informations in a specific table.
 ```sql       
@@ -97,7 +101,7 @@ A foreign key is a column or set of columns in a table that is used to establish
 ```sql
     FOREIGN KEY (column) REFERENCES referenced_table(referenced_column)
 ```
-**CHECK**
+## CHECK
 In summary, primary keys are used to uniquely identify each record in a table and foreign keys are used to create links between tables, ensuring data integrity and consistency.
 If you want to define a simple validation or business rule on a table, CHECK is suitable. 
 > This constraint forces a value to belong to a specific range.
