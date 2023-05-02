@@ -29,4 +29,4 @@ Es sind viele verschiedene RDBMS und DBs verfügbar, z. B. MySQL, Oracle, Micros
 - [MariaDB](https://mariadb.org/) ist ein Fork von MySQL und wird oft als erweiterte Open-Source-Version von MySQL betrachtet.
 
 Sie können jede dieser DBs je nach Bedarf und Eignung herunterladen und installieren. <br>
-** Viel Spaß beim Programmieren! 🚀**
+**Viel Spaß beim Programmieren! 🚀**
